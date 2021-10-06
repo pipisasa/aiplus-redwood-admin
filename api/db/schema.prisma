@@ -8,11 +8,167 @@ generator client {
   binaryTargets = "native"
 }
 
-// Define your own datamodels here and run `yarn redwood prisma migrate dev`
-// to create migrations for them and apply to your dev DB.
-// TODO: Please remove the following example:
-model UserExample {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model User {
+  id             Int      @id @default(autoincrement())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  name           String?
+  email          String   @unique
+  hashedPassword String?
+  role           String   @default("USER")
+
+  // tokens   Token[]
+  // sessions Session[]
+}
+
+// model Session {
+//   id                 Int       @id @default(autoincrement())
+//   createdAt          DateTime  @default(now())
+//   updatedAt          DateTime  @updatedAt
+//   expiresAt          DateTime?
+//   handle             String    @unique
+//   hashedSessionToken String?
+//   antiCSRFToken      String?
+//   publicData         String?
+//   privateData        String?
+
+//   // user   User? @relation(fields: [userId], references: [id])
+//   // userId Int?
+// }
+
+// model Token {
+//   id          Int      @id @default(autoincrement())
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+//   hashedToken String
+//   type        String
+//   // See note below about TokenType enum
+//   // type        TokenType
+//   expiresAt   DateTime
+//   sentTo      String
+
+//   // user   User @relation(fields: [userId], references: [id])
+//   // userId Int
+
+//   @@unique([hashedToken, type])
+// }
+
+// NOTE: It's highly recommended to use an enum for the token type
+//       but enums only work in Postgres.
+//       See: https://blitzjs.com/docs/database-overview#switch-to-postgresql
+// enum TokenType {
+//   RESET_PASSWORD
+// }
+
+model City {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(255)
+  schools   School[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Faq {
+  id            Int      @id @default(autoincrement())
+  titleRu       String   @db.VarChar(255)
+  titleKz       String   @db.VarChar(255)
+  descriptionRu String
+  descriptionKz String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model School {
+  id            Int       @id @default(autoincrement())
+  city          City      @relation(fields: [cityId], references: [id])
+  cityId        Int
+  titleEn       String    @db.VarChar(255)
+  titleRu       String    @db.VarChar(255)
+  titleKz       String    @db.VarChar(255)
+  descriptionEn String
+  descriptionRu String
+  descriptionKz String
+  programs      Program[]
+  students      Student[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Program {
+  id            Int      @id @default(autoincrement())
+  school        School   @relation(fields: [schoolId], references: [id])
+  schoolId      Int
+  titleEn       String   @db.VarChar(255)
+  titleRu       String   @db.VarChar(255)
+  titleKz       String   @db.VarChar(255)
+  descriptionEn String
+  descriptionRu String
+  descriptionKz String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Student {
+  id           Int      @id @default(autoincrement())
+  school       School   @relation(fields: [schoolId], references: [id])
+  schoolId     Int
+  firstName    String   @db.VarChar(255)
+  lastName     String   @db.VarChar(255)
+  dateOfFinish DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  images       Image[]  @relation("studentImages")
+}
+
+model Subject {
+  id            Int       @id @default(autoincrement())
+  titleEn       String    @db.VarChar(255)
+  titleRu       String    @db.VarChar(255)
+  titleKz       String    @db.VarChar(255)
+  descriptionEn String?
+  descriptionRu String?
+  descriptionKz String?
+  schools       Teacher[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Teacher {
+  id        Int      @id @default(autoincrement())
+  subject   Subject? @relation(fields: [subjectId], references: [id])
+  subjectId Int?
+  firstName String   @db.VarChar(255)
+  lastName  String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  // images    Image[] @relation("teacherImages")
+}
+
+model Feature {
+  id        Int      @id @default(autoincrement())
+  titleKz   String   @db.VarChar(255)
+  titleRu   String   @db.VarChar(255)
+  titleEn   String   @db.VarChar(255)
+  contentKz String
+  contentRu String
+  contentEn String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  // images    Image[] @relation("featureImages")
+}
+
+model Image {
+  id          Int      @id @default(autoincrement())
+  title       String?
+  size        Int?
+  contentType String?
+  url         String
+  student     Student? @relation("studentImages", fields: [studentId], references: [id])
+  studentId   Int?
+  // feature     Feature? @relation("featureImages", fields: [featureId], references: [id])
+  // featureId   Int?
+  // teacher     Teacher? @relation("teacherImages", fields: [teacherId], references: [id])
+  // teacherId   Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
