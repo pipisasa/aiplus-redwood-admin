@@ -1,35 +1,18 @@
-import { parseJWT } from '@redwoodjs/api'
 import { AuthenticationError, ForbiddenError } from '@redwoodjs/graphql-server'
-import { GetCurrentUser } from '@redwoodjs/graphql-server/dist/functions/types'
+import { db } from './db'
 
-/**
- * getCurrentUser returns the user information together with
- * an optional collection of roles used by requireAuth() to check
- * if the user is authenticated or has role-based access
- *
- * @param decoded - The decoded access token containing user info and JWT claims like `sub`. Note could be null.
- * @param { token, SupportedAuthTypes type } - The access token itself as well as the auth provider type
- * @param { APIGatewayEvent event, Context context } - An object which contains information from the invoker
- * such as headers and cookies, and the context information about the invocation such as IP Address
- *
- * @see https://github.com/redwoodjs/redwood/tree/main/packages/auth for examples
- */
-export const getCurrentUser: GetCurrentUser = async (
-  decoded: Record<string, unknown>,
-  { _token, _type }: any,
-  { _event, _context }: any
-) => {
-  if (!decoded) {
-    return null
-  }
+// The session object sent in as the first arugment to getCurrentUser() will
+// have a single key `id` containing the unique ID of the logged in user
+// (whatever field you set as `authFields.id` in your auth function config).
+// You'll need to update the call to `db` below if you use a different model
+// name or unique field name:
+//
+//   return await db.profile.findUnique({ where: { email: session.id } })
+//                   ───┬───                       ──┬──
+//      model accessor ─┘      unique id field name ─┘
 
-  const { roles } = parseJWT({ decoded })
-
-  if (roles) {
-    return { ...decoded, roles }
-  }
-
-  return { ...decoded }
+export const getCurrentUser = async (session) => {
+  return await db.user.findUnique({ where: { id: session.id } })
 }
 
 /**
@@ -37,25 +20,19 @@ export const getCurrentUser: GetCurrentUser = async (
  *
  * @returns {boolean} - If the currentUser is authenticated
  */
-export const isAuthenticated = (): boolean => {
+export const isAuthenticated = () => {
   return !!context.currentUser
 }
 
 /**
- * When checking role membership, roles can be a single value, a list, or none.
- * You can use Prisma enums too (if you're using them for roles), just import your enum type from `@prisma/client`
- */
-type AllowedRoles = string | string[] | undefined
-
-/**
  * Checks if the currentUser is authenticated (and assigned one of the given roles)
  *
- * @param roles: AllowedRoles - Checks if the currentUser is assigned one of these roles
+ * @param {string= | string[]=} roles - A single role or list of roles to check if the user belongs to
  *
  * @returns {boolean} - Returns true if the currentUser is logged in and assigned one of the given roles,
  * or when no roles are provided to check against. Otherwise returns false.
  */
-export const hasRole = ({ roles }: { roles: AllowedRoles }): boolean => {
+export const hasRole = ({ roles }) => {
   if (!isAuthenticated()) {
     return false
   }
@@ -81,7 +58,7 @@ export const hasRole = ({ roles }: { roles: AllowedRoles }): boolean => {
  * whether or not they are assigned a role, and optionally raise an
  * error if they're not.
  *
- * @param roles: AllowedRoles - When checking role membership, these roles grant access.
+ * @param {string= | string[]=} roles - A single role or list of roles to check if the user belongs to
  *
  * @returns - If the currentUser is authenticated (and assigned one of the given roles)
  *
@@ -90,7 +67,10 @@ export const hasRole = ({ roles }: { roles: AllowedRoles }): boolean => {
  *
  * @see https://github.com/redwoodjs/redwood/tree/main/packages/auth for examples
  */
-export const requireAuth = ({ roles }: { roles: AllowedRoles }) => {
+interface IRequireAuth {
+  roles?: string[]
+}
+export const requireAuth = ({ roles }: IRequireAuth = {}) => {
   if (!isAuthenticated()) {
     throw new AuthenticationError("You don't have permission to do that.")
   }
