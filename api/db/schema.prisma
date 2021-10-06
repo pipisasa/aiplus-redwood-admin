@@ -14,7 +14,8 @@ model User {
   updatedAt      DateTime @updatedAt
   name           String?
   email          String   @unique
-  hashedPassword String?
+  hashedPassword String   @default("")
+  salt           String   @default("")
   role           String   @default("USER")
 
   // tokens   Token[]
