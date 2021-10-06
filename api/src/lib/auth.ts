@@ -1,5 +1,6 @@
 import { parseJWT } from '@redwoodjs/api'
 import { AuthenticationError, ForbiddenError } from '@redwoodjs/graphql-server'
+import { GetCurrentUser } from '@redwoodjs/graphql-server/dist/functions/types'
 
 /**
  * getCurrentUser returns the user information together with
@@ -13,10 +14,10 @@ import { AuthenticationError, ForbiddenError } from '@redwoodjs/graphql-server'
  *
  * @see https://github.com/redwoodjs/redwood/tree/main/packages/auth for examples
  */
-export const getCurrentUser = async (
-  decoded,
-  { _token, _type },
-  { _event, _context }
+export const getCurrentUser: GetCurrentUser = async (
+  decoded: Record<string, unknown>,
+  { _token, _type }: any,
+  { _event, _context }: any
 ) => {
   if (!decoded) {
     return null
