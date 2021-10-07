@@ -78,6 +78,13 @@ model Faq {
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }
+model Facts{
+  id            Int      @id @default(autoincrement())
+  titleRu       String   @db.VarChar(255)
+  titleKz       String   @db.VarChar(255)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
 
 model School {
   id            Int       @id @default(autoincrement())
@@ -172,4 +179,11 @@ model Image {
   // teacherId   Int?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+}
+
+model RW_DataMigration {
+  version    String   @id
+  name       String
+  startedAt  DateTime
+  finishedAt DateTime
 }
