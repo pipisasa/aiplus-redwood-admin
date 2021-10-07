@@ -82,6 +82,8 @@ model Facts{
   id            Int      @id @default(autoincrement())
   titleRu       String   @db.VarChar(255)
   titleKz       String   @db.VarChar(255)
+  orderNumber   Int      @default(0)
+  image         String   @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }
@@ -125,7 +127,7 @@ model Student {
   dateOfFinish DateTime
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
-  images       Image[]  @relation("studentImages")
+  // images       Image[]  @relation("studentImages")
 }
 
 model Subject {
@@ -165,21 +167,21 @@ model Feature {
   // images    Image[] @relation("featureImages")
 }
 
-model Image {
-  id          Int      @id @default(autoincrement())
-  title       String?
-  size        Int?
-  contentType String?
-  url         String
-  student     Student? @relation("studentImages", fields: [studentId], references: [id])
-  studentId   Int?
-  // feature     Feature? @relation("featureImages", fields: [featureId], references: [id])
-  // featureId   Int?
-  // teacher     Teacher? @relation("teacherImages", fields: [teacherId], references: [id])
-  // teacherId   Int?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
+// model Image {
+//   id          Int      @id @default(autoincrement())
+//   title       String?
+//   size        Int?
+//   contentType String?
+//   url         String
+//   student     Student? @relation("studentImages", fields: [studentId], references: [id])
+//   studentId   Int?
+//   // feature     Feature? @relation("featureImages", fields: [featureId], references: [id])
+//   // featureId   Int?
+//   // teacher     Teacher? @relation("teacherImages", fields: [teacherId], references: [id])
+//   // teacherId   Int?
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+// }
 
 model RW_DataMigration {
   version    String   @id
