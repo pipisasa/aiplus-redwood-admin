@@ -334,3 +334,40 @@
   text-align: center;
   flex-basis: 100%;
 }
+
+
+.rw-dropzone{
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-color: #e2e8f0;
+  color: #4a5568;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.rw-dropzone:hover{
+  color: #2196f3;
+  background: #f1f1f1;
+}
+
+.rw-dropzone-container .file-list{
+  list-style: none;
+  padding: 0 0 0 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.rw-dropzone-container .file-list > li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.rw-dropzone__preview{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: .25rem;
+  border: 1px solid #dbd8d8;
+  padding: 0.25rem;
+}

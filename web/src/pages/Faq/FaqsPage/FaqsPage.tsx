@@ -1,7 +1,12 @@
 import FaqsCell from 'src/components/Faq/FaqsCell'
+import FaqsLayout from 'src/layouts/FaqsLayout/FaqsLayout'
 
 const FaqsPage = () => {
-  return <FaqsCell />
+  return (
+    <FaqsLayout>
+      <FaqsCell />
+    </FaqsLayout>
+  )
 }
 
 export default FaqsPage

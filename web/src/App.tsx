@@ -7,6 +7,7 @@ import Routes from 'src/Routes'
 
 import './scaffold.css'
 import './index.css'
+import './firebase/firebaseApp'
 
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>

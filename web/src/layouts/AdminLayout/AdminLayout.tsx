@@ -33,6 +33,11 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
               </Link>
             </li>
             <li>
+              <Link to={routes.facts()} className="rw-link">
+                Facts
+              </Link>
+            </li>
+            <li>
               <button
                 className="rw-button rw-button-green"
                 onClick={() => logOut()}

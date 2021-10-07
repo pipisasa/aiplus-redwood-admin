@@ -7,6 +7,7 @@ import {
   NumberField,
   Submit,
 } from '@redwoodjs/forms'
+import ImageInput from 'src/components/Form/ImageInput'
 
 // const formatDatetime = (value) => {
 //   if (value) {
@@ -15,8 +16,15 @@ import {
 // }
 
 const FactForm = (props) => {
+  const [image, setImage] = React.useState('')
   const onSubmit = (data) => {
-    props.onSave(data, props?.fact?.id)
+    props.onSave(
+      {
+        ...data,
+        image,
+      },
+      props?.fact?.id
+    )
   }
 
   return (
@@ -84,13 +92,7 @@ const FactForm = (props) => {
         >
           Image
         </Label>
-        <TextField
-          name="image"
-          defaultValue={props.fact?.image}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
+        <ImageInput onUploaded={(imgs) => setImage(imgs?.[0]?.url || '')} />
         <FieldError name="image" className="rw-field-error" />
 
         <div className="rw-button-group">

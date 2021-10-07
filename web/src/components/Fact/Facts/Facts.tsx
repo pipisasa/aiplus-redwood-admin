@@ -22,6 +22,16 @@ const truncate = (text) => {
   return output
 }
 
+const imageTag = (url) => (
+  <img
+    width={100}
+    height={100}
+    style={{ objectFit: 'contain' }}
+    src={url}
+    alt={url}
+  />
+)
+
 // const jsonTruncate = (obj) => {
 //   return truncate(JSON.stringify(obj, null, 2))
 // }
@@ -81,7 +91,7 @@ const FactsList = ({ facts }) => {
               <td>{truncate(fact.titleRu)}</td>
               <td>{truncate(fact.titleKz)}</td>
               <td>{truncate(fact.orderNumber)}</td>
-              <td>{truncate(fact.image)}</td>
+              <td>{imageTag(fact.image)}</td>
               <td>{timeTag(fact.createdAt)}</td>
               <td>{timeTag(fact.updatedAt)}</td>
               <td>
