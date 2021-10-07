@@ -8,11 +8,7 @@ type AdminLayoutProps = {
 }
 
 const AdminLayout = ({ children }: AdminLayoutProps) => {
-
-  const {
-    logOut,
-    isAuthenticated,
-  } = useAuth();
+  const { logOut, isAuthenticated } = useAuth()
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -25,25 +21,22 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
       <Toaster />
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
-          <Link
-            to={routes.home()}
-            className="rw-link"
-          >
+          <Link to={routes.home()} className="rw-link">
             Home
           </Link>
         </h1>
         <nav className="rw-nav">
           <ul>
             <li>
-              <Link
-                to={routes.faqs()}
-                className="rw-link"
-              >
+              <Link to={routes.faqs()} className="rw-link">
                 Faqs
               </Link>
             </li>
             <li>
-              <button className="rw-button rw-button-green" onClick={()=>logOut()}>
+              <button
+                className="rw-button rw-button-green"
+                onClick={() => logOut()}
+              >
                 <div className="rw-button-icon"></div> Logout
               </button>
             </li>

@@ -11,17 +11,11 @@ const FaqsLayout = ({ children }: FaqLayoutProps) => {
       <Toaster />
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
-          <Link
-            to={routes.faqs()}
-            className="rw-link"
-          >
+          <Link to={routes.faqs()} className="rw-link">
             Faqs
           </Link>
         </h1>
-        <Link
-          to={routes.newFaq()}
-          className="rw-button rw-button-green"
-        >
+        <Link to={routes.newFaq()} className="rw-button rw-button-green">
           <div className="rw-button-icon">+</div> New Faq
         </Link>
       </header>

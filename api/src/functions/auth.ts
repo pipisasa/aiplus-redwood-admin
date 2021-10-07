@@ -2,7 +2,6 @@ import { db } from 'src/lib/db'
 import { DbAuthHandler } from '@redwoodjs/api'
 
 export const handler = async (event, context) => {
-
   const loginOptions = {
     // login.handler() is called after finding the user that matches the
     // username/password provided at login, but before actually considering them
@@ -54,7 +53,7 @@ export const handler = async (event, context) => {
           email: username,
           hashedPassword: hashedPassword,
           salt: salt,
-          // name: userAttributes.name
+          name: userAttributes?.name,
         },
       })
     },

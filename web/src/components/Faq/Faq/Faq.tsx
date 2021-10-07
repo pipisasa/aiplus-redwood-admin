@@ -10,13 +10,13 @@ const DELETE_FAQ_MUTATION = gql`
   }
 `
 
-const jsonDisplay = (obj) => {
-  return (
-    <pre>
-      <code>{JSON.stringify(obj, null, 2)}</code>
-    </pre>
-  )
-}
+// const jsonDisplay = (obj) => {
+//   return (
+//     <pre>
+//       <code>{JSON.stringify(obj, null, 2)}</code>
+//     </pre>
+//   )
+// }
 
 const timeTag = (datetime) => {
   return (
@@ -26,9 +26,9 @@ const timeTag = (datetime) => {
   )
 }
 
-const checkboxInputTag = (checked) => {
-  return <input type="checkbox" checked={checked} disabled />
-}
+// const checkboxInputTag = (checked) => {
+//   return <input type="checkbox" checked={checked} disabled />
+// }
 
 const Faq = ({ faq }) => {
   const [deleteFaq] = useMutation(DELETE_FAQ_MUTATION, {
@@ -51,29 +51,37 @@ const Faq = ({ faq }) => {
     <>
       <div className="rw-segment">
         <header className="rw-segment-header">
-          <h2 className="rw-heading rw-heading-secondary">Faq {faq.id} Detail</h2>
+          <h2 className="rw-heading rw-heading-secondary">
+            Faq {faq.id} Detail
+          </h2>
         </header>
         <table className="rw-table">
           <tbody>
             <tr>
               <th>Id</th>
               <td>{faq.id}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Title ru</th>
               <td>{faq.titleRu}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Title kz</th>
               <td>{faq.titleKz}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Description ru</th>
               <td>{faq.descriptionRu}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Description kz</th>
               <td>{faq.descriptionKz}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(faq.createdAt)}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Updated at</th>
               <td>{timeTag(faq.updatedAt)}</td>
             </tr>
