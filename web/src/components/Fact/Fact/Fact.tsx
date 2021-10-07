@@ -10,13 +10,13 @@ const DELETE_FACT_MUTATION = gql`
   }
 `
 
-const jsonDisplay = (obj) => {
-  return (
-    <pre>
-      <code>{JSON.stringify(obj, null, 2)}</code>
-    </pre>
-  )
-}
+// const jsonDisplay = (obj) => {
+//   return (
+//     <pre>
+//       <code>{JSON.stringify(obj, null, 2)}</code>
+//     </pre>
+//   )
+// }
 
 const timeTag = (datetime) => {
   return (
@@ -26,9 +26,9 @@ const timeTag = (datetime) => {
   )
 }
 
-const checkboxInputTag = (checked) => {
-  return <input type="checkbox" checked={checked} disabled />
-}
+// const checkboxInputTag = (checked) => {
+//   return <input type="checkbox" checked={checked} disabled />
+// }
 
 const Fact = ({ fact }) => {
   const [deleteFact] = useMutation(DELETE_FACT_MUTATION, {
@@ -51,29 +51,37 @@ const Fact = ({ fact }) => {
     <>
       <div className="rw-segment">
         <header className="rw-segment-header">
-          <h2 className="rw-heading rw-heading-secondary">Fact {fact.id} Detail</h2>
+          <h2 className="rw-heading rw-heading-secondary">
+            Fact {fact.id} Detail
+          </h2>
         </header>
         <table className="rw-table">
           <tbody>
             <tr>
               <th>Id</th>
               <td>{fact.id}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Title ru</th>
               <td>{fact.titleRu}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Title kz</th>
               <td>{fact.titleKz}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Order number</th>
               <td>{fact.orderNumber}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Image</th>
               <td>{fact.image}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(fact.createdAt)}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Updated at</th>
               <td>{timeTag(fact.updatedAt)}</td>
             </tr>

@@ -11,17 +11,11 @@ const FactsLayout = ({ children }: FactLayoutProps) => {
       <Toaster />
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
-          <Link
-            to={routes.facts()}
-            className="rw-link"
-          >
+          <Link to={routes.facts()} className="rw-link">
             Facts
           </Link>
         </h1>
-        <Link
-          to={routes.newFact()}
-          className="rw-button rw-button-green"
-        >
+        <Link to={routes.newFact()} className="rw-button rw-button-green">
           <div className="rw-button-icon">+</div> New Fact
         </Link>
       </header>
