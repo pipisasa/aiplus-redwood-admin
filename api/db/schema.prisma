@@ -62,11 +62,13 @@ model User {
 // }
 
 model City {
-  id        Int      @id @default(autoincrement())
-  name      String   @db.VarChar(255)
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(255)
   schools   School[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Program   Program[]
+  Student   Student[]
 }
 
 model Faq {
@@ -78,14 +80,15 @@ model Faq {
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }
-model Fact{
-  id            Int      @id @default(autoincrement())
-  titleRu       String   @db.VarChar(255)
-  titleKz       String   @db.VarChar(255)
-  orderNumber   Int      @default(0)
-  image         String   @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+
+model Fact {
+  id          Int      @id @default(autoincrement())
+  titleRu     String   @db.VarChar(255)
+  titleKz     String   @db.VarChar(255)
+  orderNumber Int      @default(0)
+  image       String   @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
 
 model School {
@@ -99,48 +102,121 @@ model School {
   descriptionRu String
   descriptionKz String
   programs      Program[]
-  students      Student[]
+  // students      Student[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 }
 
 model Program {
-  id            Int      @id @default(autoincrement())
-  school        School   @relation(fields: [schoolId], references: [id])
-  schoolId      Int
-  titleEn       String   @db.VarChar(255)
-  titleRu       String   @db.VarChar(255)
-  titleKz       String   @db.VarChar(255)
-  descriptionEn String
-  descriptionRu String
-  descriptionKz String
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id                   Int              @id @default(autoincrement())
+  titleRu              String           @db.VarChar(255)
+  titleKz              String           @db.VarChar(255)
+  shortSchoolNameRu    String?          @db.VarChar(255)
+  shortSchoolNameKz    String?          @db.VarChar(255)
+  fullSchoolNameRu     String?          @db.VarChar(255)
+  fullSchoolNameKz     String?          @db.VarChar(255)
+  subTitleRu           String?          @db.VarChar(255)
+  subTitleKz           String?          @db.VarChar(255)
+  city                 City             @relation(fields: [cityId], references: [id])
+  titleAtRootRu        String?          @db.VarChar(255)
+  titleAtRootKz        String?          @db.VarChar(255)
+  titleAtRootHoverRu   String?          @db.VarChar(255)
+  titleAtRootHoverKz   String?          @db.VarChar(255)
+  logo                 String
+  logoAtRoot           String?
+  logoAtListOfPrograms String?
+  orderNumber          Int              @default(0)
+  youtubeVideoId       String?          @db.VarChar(255)
+  videoTitleRu         String           @db.VarChar(255)
+  videoTitleKz         String           @db.VarChar(255)
+  factAboutProgramKz   String?
+  factAboutProgramRu   String?
+  titleWhyRu           String           @db.VarChar(255)
+  titleWhyKz           String           @db.VarChar(255)
+  textWhyKz            String?
+  textWhyRu            String?
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @updatedAt
+  School               School?          @relation(fields: [schoolId], references: [id])
+  schoolId             Int?
+  ProgramBenefits      ProgramBenefit[]
+  ProgramWhy           ProgramWhy[]
+  ProgramSubject       ProgramSubject[]
+  cityId               Int
+  Student              Student[]
 }
 
 model Student {
-  id           Int      @id @default(autoincrement())
-  school       School   @relation(fields: [schoolId], references: [id])
-  schoolId     Int
-  firstName    String   @db.VarChar(255)
-  lastName     String   @db.VarChar(255)
-  dateOfFinish DateTime
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  // images       Image[]  @relation("studentImages")
+  id               Int      @id @default(autoincrement())
+  fioKz            String   @db.VarChar(255)
+  fioRu            String   @db.VarChar(255)
+  image            String?
+  beforeBallCount  String   @db.VarChar(255)
+  afterBallCount   String   @db.VarChar(255)
+  orderNum         Int      @default(0)
+  listOrderNum     Int      @default(0)
+  descriptionKz    String
+  descriptionRu    String
+  textKz           String
+  textRu           String
+  feedbackKz       String
+  feedbackRu       String
+  youtubeVideoId   String
+  sliderSubtitleKz String   @db.VarChar(255)
+  sliderSubtitleRu String   @db.VarChar(255)
+  year             DateTime
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  program          Program  @relation(fields: [programId], references: [id])
+  programId        Int
+  city             City     @relation(fields: [cityId], references: [id])
+  cityId           Int
 }
 
 model Subject {
-  id            Int       @id @default(autoincrement())
-  titleEn       String    @db.VarChar(255)
-  titleRu       String    @db.VarChar(255)
-  titleKz       String    @db.VarChar(255)
-  descriptionEn String?
-  descriptionRu String?
-  descriptionKz String?
-  schools       Teacher[]
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id             Int              @id @default(autoincrement())
+  titleRu        String           @db.VarChar(255)
+  titleKz        String           @db.VarChar(255)
+  descriptionRu  String?
+  descriptionKz  String?
+  schools        Teacher[]
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  ProgramSubject ProgramSubject[]
+}
+
+model ProgramBenefit {
+  id          Int      @id @default(autoincrement())
+  program     Program  @relation(fields: [programId], references: [id])
+  titleKz     String?  @db.VarChar(255)
+  titleRu     String?  @db.VarChar(255)
+  orderNumber Int?     @default(0)
+  image       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  programId   Int
+}
+
+model ProgramWhy {
+  id          Int      @id @default(autoincrement())
+  program     Program  @relation(fields: [programId], references: [id])
+  textKz      String
+  textRu      String
+  orderNumber Int?     @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  programId   Int
+}
+
+model ProgramSubject {
+  id          Int     @id @default(autoincrement())
+  orderNumber Int     @default(0)
+  program     Program @relation(fields: [programId], references: [id])
+  subject     Subject @relation(fields: [subjectId], references: [id])
+  programId   Int
+  subjectId   Int
+
+  @@unique([programId, subjectId])
 }
 
 model Teacher {
@@ -155,15 +231,14 @@ model Teacher {
 }
 
 model Feature {
-  id        Int      @id @default(autoincrement())
-  titleKz   String   @db.VarChar(255)
-  titleRu   String   @db.VarChar(255)
-  titleEn   String   @db.VarChar(255)
-  contentKz String
-  contentRu String
-  contentEn String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id            Int      @id @default(autoincrement())
+  titleKz       String   @db.VarChar(255)
+  titleRu       String   @db.VarChar(255)
+  descriptionKz String
+  descriptionRu String
+  image         String?  @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
   // images    Image[] @relation("featureImages")
 }
 

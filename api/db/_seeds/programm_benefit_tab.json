@@ -1,0 +1,402 @@
+[
+  {
+    "programm_benefit_id": 1,
+    "programm_id": 2,
+    "programm_benefit_img": "15560253451_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "АҒЫЛШЫН ТІЛІНДЕ САПАЛЫ БІЛІМ АЛУ",
+    "programm_benefit_title_ru": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ",
+    "order_num": 1,
+    "created_at": "2019-02-21 06:36:11",
+    "updated_at": "2020-04-21 11:57:21"
+  },
+  {
+    "programm_benefit_id": 2,
+    "programm_id": 2,
+    "programm_benefit_img": "15560242522_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КӨШБАСШЫЛАР МЕН КӘСІПҚОЙЛАР ОРТАСЫ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-02-21 06:38:43",
+    "updated_at": "2020-04-21 11:57:21"
+  },
+  {
+    "programm_benefit_id": 3,
+    "programm_id": 2,
+    "programm_benefit_img": "15560205633_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "БЕЛСЕНДІ ҚОҒАМ ӨМІРІ",
+    "programm_benefit_title_ru": "АКТИВНАЯ СОЦИАЛЬНАЯ ЖИЗНЬ ",
+    "order_num": 3,
+    "created_at": "2019-02-21 06:39:09",
+    "updated_at": "2020-04-21 11:57:21"
+  },
+  {
+    "programm_benefit_id": 4,
+    "programm_id": 2,
+    "programm_benefit_img": "15560248964_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ТЕХНИКА ҒЫЛЫМДАРЫН ЖОҒАРЫ ДЕҢГЕЙДЕ БІЛУ",
+    "programm_benefit_title_ru": "ВЫСОКОЕ ПОНИМАНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "order_num": 4,
+    "created_at": "2019-02-21 06:39:09",
+    "updated_at": "2020-04-21 11:57:21"
+  },
+  {
+    "programm_benefit_id": 5,
+    "programm_id": 3,
+    "programm_benefit_img": "15934212391_programm_benefit_img.png",
+    "programm_benefit_title_kz": "ТЕХНИКА ҒЫЛЫДАРЫН ТЕРЕҢДЕТІП ОҚУ",
+    "programm_benefit_title_ru": "УГЛУБЛЕННОЕ ИЗУЧЕНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "order_num": 1,
+    "created_at": "2019-02-24 05:50:20",
+    "updated_at": "2020-06-29 09:00:39"
+  },
+  {
+    "programm_benefit_id": 6,
+    "programm_id": 3,
+    "programm_benefit_img": "15560267862_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КӨШБАСШЫЛАР МЕН КӘСІПҚОЙЛАР ОРТАСЫ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ .",
+    "order_num": 2,
+    "created_at": "2019-02-24 05:50:21",
+    "updated_at": "2020-04-21 12:20:33"
+  },
+  {
+    "programm_benefit_id": 7,
+    "programm_id": 3,
+    "programm_benefit_img": "15934211523_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "МЫҚТЫ МҰҒАЛІМДЕР ТОБЫ",
+    "programm_benefit_title_ru": "СИЛЬНЕЙШИЙ ПРЕПОДАВАТЕЛЬСКИЙ СОСТАВ",
+    "order_num": 3,
+    "created_at": "2019-02-24 05:50:21",
+    "updated_at": "2020-06-29 08:59:12"
+  },
+  {
+    "programm_benefit_id": 8,
+    "programm_id": 3,
+    "programm_benefit_img": "15934211524_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ЖЫЛ САЙЫН ОЛИМПИАДА ЖЕҢІМПАЗДАРЫ",
+    "programm_benefit_title_ru": "ЕЖЕГОДНЫЕ ПРИЗЕРЫ МЕЖДУНАРОДНЫХ ОЛИМПИАД",
+    "order_num": 4,
+    "created_at": "2019-02-24 05:50:21",
+    "updated_at": "2020-06-29 08:59:12"
+  },
+  {
+    "programm_benefit_id": 13,
+    "programm_id": 5,
+    "programm_benefit_img": "15560328591_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ТЕХНОЛОГИЯЛЫҚ ПӘНДЕРДЕН ТЕРЕҢДЕТІЛІП ОҚЫТЫЛУЫ",
+    "programm_benefit_title_ru": "УСИЛЕННЫЕ ЗАНЯТИЯ ПО ТЕХНИЧЕСКИМ ПРЕДМЕТАМ",
+    "order_num": 1,
+    "created_at": "2019-02-21 06:36:11",
+    "updated_at": "2020-04-21 12:32:16"
+  },
+  {
+    "programm_benefit_id": 14,
+    "programm_id": 5,
+    "programm_benefit_img": "15560336212_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КӨШБАСШЫЛАР МЕН КӘСІПҚОЙЛАР ОРТАСЫ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-02-21 06:38:43",
+    "updated_at": "2020-04-21 12:32:16"
+  },
+  {
+    "programm_benefit_id": 15,
+    "programm_id": 5,
+    "programm_benefit_img": "15560333343_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "БЕЛСЕНДІ ҚОҒАӨМІРІ",
+    "programm_benefit_title_ru": "АКТИВНАЯ СОЦИАЛЬНАЯ ЖИЗНЬ ",
+    "order_num": 3,
+    "created_at": "2019-02-21 06:39:09",
+    "updated_at": "2020-04-21 12:32:16"
+  },
+  {
+    "programm_benefit_id": 16,
+    "programm_id": 5,
+    "programm_benefit_img": "15560334744_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "МЫҚТЫ МҰҒАЛІМДЕР ТОБЫ",
+    "programm_benefit_title_ru": "СИЛЬНЫЙ ПРЕПОДАВАТЕЛЬСКИЙ СОСТАВ ",
+    "order_num": 4,
+    "created_at": "2019-02-21 06:39:09",
+    "updated_at": "2020-04-21 12:32:16"
+  },
+  {
+    "programm_benefit_id": 17,
+    "programm_id": 6,
+    "programm_benefit_img": "15560355641_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "АҒЫЛШЫН ТІЛІНДЕ САПАЛЫ БІЛІМ АЛУ",
+    "programm_benefit_title_ru": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ",
+    "order_num": 1,
+    "created_at": "2019-03-18 06:07:49",
+    "updated_at": "2020-04-21 12:42:33"
+  },
+  {
+    "programm_benefit_id": 20,
+    "programm_id": 6,
+    "programm_benefit_img": "15560318292_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КӨШБАСШЫЛАР МЕН КӘСІПҚОЙЛАР ОРТАСЫ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-04-08 05:43:37",
+    "updated_at": "2020-04-21 12:42:33"
+  },
+  {
+    "programm_benefit_id": 21,
+    "programm_id": 6,
+    "programm_benefit_img": "15560346913_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "Түрік тілін жетік меңгеру ",
+    "programm_benefit_title_ru": "РЕБЕНОК СВОБОДНО ОВЛАДЕЕТ ТУРЕЦКИМ ЯЗЫКОМ",
+    "order_num": 3,
+    "created_at": "2019-04-08 05:43:37",
+    "updated_at": "2020-04-21 12:42:33"
+  },
+  {
+    "programm_benefit_id": 22,
+    "programm_id": 6,
+    "programm_benefit_img": "15560346094_programm_benefit_img.png",
+    "programm_benefit_title_kz": "ЖЫЛ САЙЫН ОЛИМПИАДА ЖЕҢІМПАЗДАРЫ",
+    "programm_benefit_title_ru": "БИЛ(КТЛ) ЕЖЕГОДНО ЗАНИМАЮТ ПРИЗОВЫЕ МЕСТА НА ОЛИМПИАДАХ ",
+    "order_num": 4,
+    "created_at": "2019-04-08 05:43:37",
+    "updated_at": "2020-04-21 12:42:33"
+  },
+  {
+    "programm_benefit_id": 24,
+    "programm_id": 9,
+    "programm_benefit_img": "15560368671_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "МЫҚТЫ МҰҒАЛІМДЕР ТОБЫ",
+    "programm_benefit_title_ru": "СИЛЬНЕЙШИЙ ПРЕПОДАВАТЕЛЬСКИЙ СОСТАВ",
+    "order_num": 3,
+    "created_at": "2019-04-08 10:30:03",
+    "updated_at": "2020-04-21 13:11:34"
+  },
+  {
+    "programm_benefit_id": 25,
+    "programm_id": 9,
+    "programm_benefit_img": "15560361122_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "СЫНЫПТАР ТЕХНИКАЛЫҚ ОҚУ-ЖАБДЫҚТАРЫМЕН",
+    "programm_benefit_title_ru": "ТЕХНИЧЕСКИ ОБОРУДОВАННЫЕ КЛАССЫ",
+    "order_num": 2,
+    "created_at": "2019-04-08 10:30:03",
+    "updated_at": "2020-04-21 13:11:34"
+  },
+  {
+    "programm_benefit_id": 26,
+    "programm_id": 9,
+    "programm_benefit_img": "15560374083_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "АЗИЯ БОЙЫНША ЖЫЛ САЙЫН ОЛИМПИАДА ЖЕҢІМПАЗЫ",
+    "programm_benefit_title_ru": "ЕЖЕГОДНЫЕ ПРИЗЕРЫ ОЛИМПИАД ПО ВСЕЙ АЗИИ",
+    "order_num": 1,
+    "created_at": "2019-04-08 10:30:03",
+    "updated_at": "2020-04-21 13:11:34"
+  },
+  {
+    "programm_benefit_id": 28,
+    "programm_id": 9,
+    "programm_benefit_img": "15560362794_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "АЛДЫҢҒЫ ҚАТАРЛЫ ОҚЫУ МЕТОДИКАСЫ",
+    "programm_benefit_title_ru": "ПЕРЕДОВЫЕ МЕТОДИКИ ОБУЧЕНИЯ",
+    "order_num": 5,
+    "created_at": "2019-04-09 08:49:15",
+    "updated_at": "2020-04-21 13:11:34"
+  },
+  {
+    "programm_benefit_id": 33,
+    "programm_id": 11,
+    "programm_benefit_img": "15604020861_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ ",
+    "programm_benefit_title_ru": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ ",
+    "order_num": 1,
+    "created_at": "2019-06-13 05:01:26",
+    "updated_at": "2019-06-13 05:01:26"
+  },
+  {
+    "programm_benefit_id": 34,
+    "programm_id": 11,
+    "programm_benefit_img": "15604020862_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-06-13 05:01:26",
+    "updated_at": "2019-06-13 05:01:26"
+  },
+  {
+    "programm_benefit_id": 35,
+    "programm_id": 11,
+    "programm_benefit_img": "15604020863_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "АКТИВНАЯ СОЦИАЛЬНАЯ ЖИЗНЬ ",
+    "programm_benefit_title_ru": "АКТИВНАЯ СОЦИАЛЬНАЯ ЖИЗНЬ ",
+    "order_num": 3,
+    "created_at": "2019-06-13 05:01:26",
+    "updated_at": "2019-06-13 05:01:26"
+  },
+  {
+    "programm_benefit_id": 36,
+    "programm_id": 11,
+    "programm_benefit_img": "15604020864_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ВЫСОКОЕ ПОНИМАНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "programm_benefit_title_ru": "ВЫСОКОЕ ПОНИМАНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "order_num": 4,
+    "created_at": "2019-06-13 05:01:26",
+    "updated_at": "2019-06-13 05:01:26"
+  },
+  {
+    "programm_benefit_id": 37,
+    "programm_id": 12,
+    "programm_benefit_img": "15604026871_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "УГЛУБЛЕННОЕ ИЗУЧЕНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "programm_benefit_title_ru": "УГЛУБЛЕННОЕ ИЗУЧЕНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "order_num": 1,
+    "created_at": "2019-06-13 05:11:27",
+    "updated_at": "2019-06-13 05:11:27"
+  },
+  {
+    "programm_benefit_id": 38,
+    "programm_id": 12,
+    "programm_benefit_img": "15604026872_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-06-13 05:11:27",
+    "updated_at": "2019-06-13 05:11:27"
+  },
+  {
+    "programm_benefit_id": 39,
+    "programm_id": 12,
+    "programm_benefit_img": "15604026873_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "СИЛЬНЕЙШИЙ ПРЕПОДАВАТЕЛЬСКИЙ СОСТАВ",
+    "programm_benefit_title_ru": "СИЛЬНЕЙШИЙ ПРЕПОДАВАТЕЛЬСКИЙ СОСТАВ",
+    "order_num": 3,
+    "created_at": "2019-06-13 05:11:27",
+    "updated_at": "2019-06-13 05:11:27"
+  },
+  {
+    "programm_benefit_id": 40,
+    "programm_id": 12,
+    "programm_benefit_img": "15604026874_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ЕЖЕГОДНЫЕ ПРИЗЕРЫ ОЛИМПИАД",
+    "programm_benefit_title_ru": "ЕЖЕГОДНЫЕ ПРИЗЕРЫ ОЛИМПИАД",
+    "order_num": 4,
+    "created_at": "2019-06-13 05:11:28",
+    "updated_at": "2019-06-13 05:11:28"
+  },
+  {
+    "programm_benefit_id": 41,
+    "programm_id": 15,
+    "programm_benefit_img": "15604054801_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ",
+    "programm_benefit_title_ru": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ",
+    "order_num": 1,
+    "created_at": "2019-06-13 05:58:00",
+    "updated_at": "2019-06-13 05:58:00"
+  },
+  {
+    "programm_benefit_id": 42,
+    "programm_id": 15,
+    "programm_benefit_img": "15604054802_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-06-13 05:58:00",
+    "updated_at": "2019-06-13 05:58:00"
+  },
+  {
+    "programm_benefit_id": 43,
+    "programm_id": 15,
+    "programm_benefit_img": "15604055173_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "РЕБЕНОК СВОБОДНО ОВЛАДЕЕТ ТУРЕЦКИМ ЯЗЫКОМ",
+    "programm_benefit_title_ru": "РЕБЕНОК СВОБОДНО ОВЛАДЕЕТ ТУРЕЦКИМ ЯЗЫКОМ",
+    "order_num": 3,
+    "created_at": "2019-06-13 05:58:00",
+    "updated_at": "2019-06-13 05:58:37"
+  },
+  {
+    "programm_benefit_id": 44,
+    "programm_id": 15,
+    "programm_benefit_img": "15604054804_programm_benefit_img.png",
+    "programm_benefit_title_kz": "БИЛ(КТЛ) ЕЖЕГОДНО ЗАНИМАЮТ ПРИЗОВЫЕ МЕСТА НА ОЛИМПИАДАХ ",
+    "programm_benefit_title_ru": "БИЛ(КТЛ) ЕЖЕГОДНО ЗАНИМАЮТ ПРИЗОВЫЕ МЕСТА НА ОЛИМПИАДАХ ",
+    "order_num": 4,
+    "created_at": "2019-06-13 05:58:00",
+    "updated_at": "2019-06-13 05:58:00"
+  },
+  {
+    "programm_benefit_id": 45,
+    "programm_id": 18,
+    "programm_benefit_img": "15604942791_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ ",
+    "programm_benefit_title_ru": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ ",
+    "order_num": 1,
+    "created_at": "2019-06-14 06:37:59",
+    "updated_at": "2019-06-14 06:37:59"
+  },
+  {
+    "programm_benefit_id": 46,
+    "programm_id": 18,
+    "programm_benefit_img": "15604942792_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-06-14 06:37:59",
+    "updated_at": "2019-06-14 06:37:59"
+  },
+  {
+    "programm_benefit_id": 48,
+    "programm_id": 18,
+    "programm_benefit_img": "15604942804_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "АКТИВНАЯ СОЦИАЛЬНАЯ ЖИЗНЬ ",
+    "programm_benefit_title_ru": "АКТИВНАЯ СОЦИАЛЬНАЯ ЖИЗНЬ ",
+    "order_num": 3,
+    "created_at": "2019-06-14 06:38:00",
+    "updated_at": "2019-06-14 06:46:48"
+  },
+  {
+    "programm_benefit_id": 49,
+    "programm_id": 18,
+    "programm_benefit_img": "15604942805_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ВЫСОКОЕ ПОНИМАНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "programm_benefit_title_ru": "ВЫСОКОЕ ПОНИМАНИЕ ТЕХНИЧЕСКИХ НАУК",
+    "order_num": 4,
+    "created_at": "2019-06-14 06:38:01",
+    "updated_at": "2019-06-14 06:46:48"
+  },
+  {
+    "programm_benefit_id": 50,
+    "programm_id": 22,
+    "programm_benefit_img": "15605077521_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ",
+    "programm_benefit_title_ru": "КАЧЕСТВЕННОЕ ОБРАЗОВАНИЕ НА АНГЛИЙСКОМ ЯЗЫКЕ",
+    "order_num": 1,
+    "created_at": "2019-06-14 10:22:32",
+    "updated_at": "2019-06-14 10:22:32"
+  },
+  {
+    "programm_benefit_id": 51,
+    "programm_id": 22,
+    "programm_benefit_img": "15605077522_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "programm_benefit_title_ru": "ОКРУЖЕНИЕ ЛИДЕРОВ И ПРОФЕССИОНАЛОВ ",
+    "order_num": 2,
+    "created_at": "2019-06-14 10:22:32",
+    "updated_at": "2019-06-14 10:22:32"
+  },
+  {
+    "programm_benefit_id": 52,
+    "programm_id": 22,
+    "programm_benefit_img": "15605078323_programm_benefit_img.jpeg",
+    "programm_benefit_title_kz": "РЕБЕНОК СВОБОДНО ОВЛАДЕЕТ ТУРЕЦКИМ ЯЗЫКОМ",
+    "programm_benefit_title_ru": "РЕБЕНОК СВОБОДНО ОВЛАДЕЕТ ТУРЕЦКИМ ЯЗЫКОМ",
+    "order_num": 3,
+    "created_at": "2019-06-14 10:22:32",
+    "updated_at": "2019-06-14 10:23:52"
+  },
+  {
+    "programm_benefit_id": 53,
+    "programm_id": 22,
+    "programm_benefit_img": "15605077524_programm_benefit_img.png",
+    "programm_benefit_title_kz": "БИЛ(КТЛ) ЕЖЕГОДНО ЗАНИМАЮТ ПРИЗОВЫЕ МЕСТА НА ОЛИМПИАДАХ ",
+    "programm_benefit_title_ru": "БИЛ(КТЛ) ЕЖЕГОДНО ЗАНИМАЮТ ПРИЗОВЫЕ МЕСТА НА ОЛИМПИАДАХ ",
+    "order_num": 4,
+    "created_at": "2019-06-14 10:22:32",
+    "updated_at": "2019-06-14 10:22:32"
+  }
+]

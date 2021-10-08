@@ -1,0 +1,30 @@
+[
+  {
+    "thank_page_id": 2,
+    "thank_page_title_kz": "Заявка",
+    "thank_page_title_ru": "Заявка",
+    "thank_page_img": "1555585880_thank_page_img.jpeg",
+    "thank_page_text_kz": "<p><span style=\"font-size:20px\">Благодарим вас за вашу заявку. Вы уже сделали первый шаг, чтобы успешно поступить в лучшие школы страны! В ближайшее время наши специалисты с вами свяжутся и обязательно вам все объяснят!</span></p>\r\n",
+    "thank_page_text_ru": "<p><span style=\"font-size:20px\">Благодарим вас за вашу заявку. Вы уже сделали первый шаг, чтобы успешно поступить в лучшие школы страны! В ближайшее время наши специалисты с вами свяжутся и обязательно вам все объяснят!</span></p>\r\n",
+    "thank_page_url": "/thanks/user-question-list",
+    "created_at": "2019-03-12 09:17:04",
+    "updated_at": "2019-04-19 05:40:29",
+    "thank_page_subtitle_kz": "Благодарим вас за заявку!",
+    "thank_page_subtitle_ru": "Благодарим вас за заявку!",
+    "thank_page_city_id": 2
+  },
+  {
+    "thank_page_id": 3,
+    "thank_page_title_kz": "Заявка для Астаны",
+    "thank_page_title_ru": "Заявка для Астаны",
+    "thank_page_img": "1555652631_thank_page_img.jpeg",
+    "thank_page_text_kz": "<p><span style=\"font-size:20px\"><strong>Благодарим вас за вашу заявку. Вы уже сделали первый шаг, чтобы успешно поступить в лучшие школы страны! В ближайшее время наши специалисты с вами свяжутся и обязательно вам все объяснят!</strong></span></p>\r\n",
+    "thank_page_text_ru": "<p><span style=\"font-size:20px\"><strong>Благодарим вас за вашу заявку. Вы уже сделали первый шаг, чтобы успешно поступить в лучшие школы страны! В ближайшее время наши специалисты с вами свяжутся и обязательно вам все объяснят!</strong></span></p>\r\n",
+    "thank_page_url": "http://aiplus.megatestovik.kz/",
+    "created_at": "2019-04-09 12:10:47",
+    "updated_at": "2019-06-05 16:28:30",
+    "thank_page_subtitle_kz": "Благодарим вас за заявку!",
+    "thank_page_subtitle_ru": "Благодарим вас за заявку!",
+    "thank_page_city_id": 1
+  }
+]
