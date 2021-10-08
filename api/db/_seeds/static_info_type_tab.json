@@ -1,0 +1,98 @@
+[
+  {
+    "static_info_type_id": 1,
+    "static_info_type_title": "Facebook",
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 2,
+    "static_info_type_title": "Instagram",
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 3,
+    "static_info_type_title": "Youtube",
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 4,
+    "static_info_type_title": "Телефон",
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 5,
+    "static_info_type_title": "Подзаголовок Наша гордость (белый)",
+    "created_at": "2019-04-10 17:04:50",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 6,
+    "static_info_type_title": "Заголовок в открытом меню",
+    "created_at": "2019-04-10 17:04:50",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 7,
+    "static_info_type_title": "Заголовок в 1ом блоке (на главной странице)",
+    "created_at": "2019-04-10 22:59:26",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 8,
+    "static_info_type_title": "Подзаголовок в 1ом блоке (на главной странице)",
+    "created_at": "2019-04-10 22:59:26",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 9,
+    "static_info_type_title": "Заголовок для адресов в футеров",
+    "created_at": "2019-04-29 12:57:24",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 10,
+    "static_info_type_title": "1ый тип заявки в пункте меню (в программах)",
+    "created_at": "2019-05-16 12:09:14",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 11,
+    "static_info_type_title": "2ой тип заявки в пункте меню (в программах)",
+    "created_at": "2019-05-16 12:09:14",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 12,
+    "static_info_type_title": "3ий тип заявки в пункте меню (в программах)",
+    "created_at": "2019-05-16 12:09:25",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 13,
+    "static_info_type_title": "4ый тип заявки в пункте меню (в программах)",
+    "created_at": "2019-05-16 12:09:25",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 14,
+    "static_info_type_title": "На главном \"БЕСПЛАТНЫЙ ПРОБНЫЙ УРОК:\"",
+    "created_at": "2019-05-25 21:31:40",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 15,
+    "static_info_type_title": "На главном заголовок для блока \"ПЕДАГОГИ\"",
+    "created_at": "2019-05-25 22:53:52",
+    "updated_at": null
+  },
+  {
+    "static_info_type_id": 16,
+    "static_info_type_title": "На главном описание для блока \"ПЕДАГОГИ\"",
+    "created_at": "2019-05-29 15:33:43",
+    "updated_at": null
+  }
+]

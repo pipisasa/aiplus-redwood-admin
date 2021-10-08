@@ -1,0 +1,62 @@
+[
+  {
+    "vacancy_id": 1,
+    "vacancy_title_kz": "Тренер математики",
+    "vacancy_title_ru": "Тренер математики",
+    "vacancy_description_kz": "Тренер математики.",
+    "vacancy_description_ru": "Тренер математики.",
+    "vacancy_img": null,
+    "created_at": "2019-05-25 17:01:28",
+    "updated_at": "2019-05-25 17:04:45"
+  },
+  {
+    "vacancy_id": 2,
+    "vacancy_title_kz": "Тренер русского языка",
+    "vacancy_title_ru": "Тренер русского языка.",
+    "vacancy_description_kz": "Тренер русского языка",
+    "vacancy_description_ru": "Тренер русского языка.",
+    "vacancy_img": null,
+    "created_at": "2019-05-25 17:04:56",
+    "updated_at": "2019-05-25 17:04:56"
+  },
+  {
+    "vacancy_id": 3,
+    "vacancy_title_kz": "Тренер казахского языка",
+    "vacancy_title_ru": "Тренер казахского языка.",
+    "vacancy_description_kz": "Тренер казахского языка",
+    "vacancy_description_ru": "Тренер казахского языка.",
+    "vacancy_img": null,
+    "created_at": "2019-05-25 17:05:05",
+    "updated_at": "2019-05-25 17:05:05"
+  },
+  {
+    "vacancy_id": 4,
+    "vacancy_title_kz": "Тренер физики",
+    "vacancy_title_ru": "Тренер физики.",
+    "vacancy_description_kz": "Тренер физики",
+    "vacancy_description_ru": "Тренер физики.",
+    "vacancy_img": null,
+    "created_at": "2019-05-25 17:05:15",
+    "updated_at": "2019-05-25 17:05:15"
+  },
+  {
+    "vacancy_id": 5,
+    "vacancy_title_kz": "Тренер химии",
+    "vacancy_title_ru": "Тренер химии.",
+    "vacancy_description_kz": "Тренер химии",
+    "vacancy_description_ru": "Тренер химии.",
+    "vacancy_img": null,
+    "created_at": "2019-05-25 17:05:25",
+    "updated_at": "2019-05-25 17:05:25"
+  },
+  {
+    "vacancy_id": 6,
+    "vacancy_title_kz": "Специалист по продажам",
+    "vacancy_title_ru": "Специалист по продажам",
+    "vacancy_description_kz": "",
+    "vacancy_description_ru": "",
+    "vacancy_img": null,
+    "created_at": "2019-05-28 12:07:29",
+    "updated_at": "2019-05-28 12:07:29"
+  }
+]

@@ -1,0 +1,425 @@
+[
+  {
+    "static_info_id": 1,
+    "static_info_type_id": 1,
+    "static_info_title_kz": "https://www.facebook.com/aiplus.kz/",
+    "static_info_title_ru": "https://www.facebook.com/aiplus.kz/",
+    "created_at": null,
+    "updated_at": "2019-05-14 08:35:48",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 2,
+    "static_info_type_id": 2,
+    "static_info_title_kz": "https://www.instagram.com/aiplus.kz/",
+    "static_info_title_ru": "https://www.instagram.com/aiplus.kz/",
+    "created_at": null,
+    "updated_at": "2019-03-02 12:16:45",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 3,
+    "static_info_type_id": 3,
+    "static_info_title_kz": "https://www.youtube.com/channel/UCMWQAATR7-gNVHRj8jZTfog",
+    "static_info_title_ru": "https://www.youtube.com/channel/UCMWQAATR7-gNVHRj8jZTfog",
+    "created_at": null,
+    "updated_at": "2019-05-14 08:35:08",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 4,
+    "static_info_type_id": 4,
+    "static_info_title_kz": "+7 (707) 705 33 66",
+    "static_info_title_ru": "+7 (707) 705 33 66",
+    "created_at": null,
+    "updated_at": "2019-02-20 09:07:12",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 5,
+    "static_info_type_id": 5,
+    "static_info_title_kz": "Ученики поступившие в НИШ и РФМШ 2017-19 года",
+    "static_info_title_ru": "Ученики поступившие в НИШ и РФМШ 2017-19 года",
+    "created_at": "2019-04-10 17:05:07",
+    "updated_at": "2019-04-24 07:54:27",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 6,
+    "static_info_type_id": 6,
+    "static_info_title_kz": "АБСОЛЮТНЫЙ РЕКОРДСМЕН ПО ПОСТУПЛЕНИЮ В НИШ,РФМШ,КТЛ",
+    "static_info_title_ru": "АБСОЛЮТНЫЙ РЕКОРДСМЕН ПО ПОСТУПЛЕНИЮ В НИШ,РФМШ,КТЛ",
+    "created_at": "2019-04-10 17:05:07",
+    "updated_at": "2019-04-24 07:54:49",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 7,
+    "static_info_type_id": 7,
+    "static_info_title_kz": "ЦЕНТР ПОДГОТОВКИ В НИШ, РФМШ, КТЛ",
+    "static_info_title_ru": "ЦЕНТР ПОДГОТОВКИ В НИШ, РФМШ, КТЛ",
+    "created_at": "2019-04-10 22:59:38",
+    "updated_at": "2019-04-11 06:54:38",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 8,
+    "static_info_type_id": 8,
+    "static_info_title_kz": "Рекордсмен по поступлению в НИШ , КТЛ, РФМШ 2020",
+    "static_info_title_ru": "Рекордсмен по поступлению в НИШ , КТЛ, РФМШ 2020",
+    "created_at": "2019-04-10 22:59:38",
+    "updated_at": "2020-11-06 11:27:48",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 9,
+    "static_info_type_id": 9,
+    "static_info_title_kz": "Мы растём также быстро, как наши ученики показывают результаты.\r\n\r\nНа сегодня в городе Алматы уже 4 филиалов AIPLUS: ",
+    "static_info_title_ru": "Мы растём также быстро, как наши ученики показывают результаты.\r\n\r\nНа сегодня в городе Алматы уже 4 филиалов AIPLUS: ",
+    "created_at": "2019-04-29 12:57:40",
+    "updated_at": "2021-06-16 11:02:58",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 10,
+    "static_info_type_id": 10,
+    "static_info_title_kz": "Бесплатная консультация по программам",
+    "static_info_title_ru": "Бесплатная консультация по программам",
+    "created_at": "2019-05-16 12:09:50",
+    "updated_at": "2019-05-20 19:25:42",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 11,
+    "static_info_type_id": 11,
+    "static_info_title_kz": "Бесплатный пробный тест",
+    "static_info_title_ru": "Бесплатный пробный тест",
+    "created_at": "2019-05-16 12:09:50",
+    "updated_at": "2019-05-17 08:33:06",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 12,
+    "static_info_type_id": 12,
+    "static_info_title_kz": "Пробное тестирование",
+    "static_info_title_ru": "Пробное тестирование",
+    "created_at": "2019-05-16 12:09:55",
+    "updated_at": "2019-05-16 06:10:35",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 13,
+    "static_info_type_id": 13,
+    "static_info_title_kz": "Записаться на курс",
+    "static_info_title_ru": "Записаться на курс",
+    "created_at": "2019-05-16 12:09:55",
+    "updated_at": "2019-05-16 06:10:42",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 14,
+    "static_info_type_id": 14,
+    "static_info_title_kz": "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ",
+    "static_info_title_ru": "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ",
+    "created_at": "2019-05-25 21:32:55",
+    "updated_at": "2019-05-27 12:13:00",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 15,
+    "static_info_type_id": 15,
+    "static_info_title_kz": "ТРЕНЕРЫ",
+    "static_info_title_ru": "ТРЕНЕРЫ",
+    "created_at": "2019-05-25 22:54:20",
+    "updated_at": "2020-05-04 09:37:56",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 16,
+    "static_info_type_id": 16,
+    "static_info_title_kz": "Наши тренеры квалифицированные специалисты с опытом подготовки в ТОП школы",
+    "static_info_title_ru": "Наши тренеры квалифицированные специалисты с опытом подготовки в ТОП школы",
+    "created_at": "2019-05-29 15:33:55",
+    "updated_at": "2020-05-04 09:37:29",
+    "static_info_city_id": 2
+  },
+  {
+    "static_info_id": 17,
+    "static_info_type_id": 5,
+    "static_info_title_kz": "Ученики поступившие в НИШ и РФМШ 2017-19 года\t",
+    "static_info_title_ru": "Ученики поступившие в НИШ и РФМШ 2017-19 года\t",
+    "created_at": "2019-06-13 11:05:09",
+    "updated_at": "2019-06-13 11:08:50",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 18,
+    "static_info_type_id": 6,
+    "static_info_title_kz": "АБСОЛЮТНЫЙ РЕКОРДСМЕН ПО ПОСТУПЛЕНИЮ В НИШ,РФМШ,КТЛ",
+    "static_info_title_ru": "АБСОЛЮТНЫЙ РЕКОРДСМЕН ПО ПОСТУПЛЕНИЮ В НИШ,РФМШ,КТЛ",
+    "created_at": "2019-06-13 11:46:39",
+    "updated_at": "2019-06-13 11:46:39",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 19,
+    "static_info_type_id": 8,
+    "static_info_title_kz": "Рекордсмен по поступлению в НИШ , КТЛ, РФМШ 2020",
+    "static_info_title_ru": "Рекордсмен по поступлению в НИШ , КТЛ, РФМШ 2020",
+    "created_at": "2019-06-13 11:47:06",
+    "updated_at": "2020-11-06 11:27:33",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 20,
+    "static_info_type_id": 7,
+    "static_info_title_kz": "ЦЕНТР ПОДГОТОВКИ В НИШ, РФМШ, КТЛ",
+    "static_info_title_ru": "ЦЕНТР ПОДГОТОВКИ В НИШ, РФМШ, КТЛ",
+    "created_at": "2019-06-13 11:50:48",
+    "updated_at": "2019-06-13 11:50:48",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 21,
+    "static_info_type_id": 1,
+    "static_info_title_kz": "https://www.facebook.com/aiplus.kz/",
+    "static_info_title_ru": "https://www.facebook.com/aiplus.kz/",
+    "created_at": "2019-06-13 11:52:39",
+    "updated_at": "2019-06-13 11:52:39",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 22,
+    "static_info_type_id": 2,
+    "static_info_title_kz": "https://www.instagram.com/aiplus.astana/",
+    "static_info_title_ru": "https://www.instagram.com/aiplus.astana/",
+    "created_at": "2019-06-13 11:53:13",
+    "updated_at": "2019-06-13 11:53:13",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 23,
+    "static_info_type_id": 3,
+    "static_info_title_kz": "https://www.youtube.com/channel/UCMWQAATR7-gNVHRj8jZTfog",
+    "static_info_title_ru": "https://www.youtube.com/channel/UCMWQAATR7-gNVHRj8jZTfog",
+    "created_at": "2019-06-13 11:53:37",
+    "updated_at": "2019-06-13 11:53:37",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 24,
+    "static_info_type_id": 4,
+    "static_info_title_kz": "+ 7 700 75 444 75",
+    "static_info_title_ru": "+ 7 700 75 444 75",
+    "created_at": "2019-06-13 11:54:04",
+    "updated_at": "2019-06-13 11:54:04",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 25,
+    "static_info_type_id": 10,
+    "static_info_title_kz": "Бесплатная консультация по программам",
+    "static_info_title_ru": "Бесплатная консультация по программам",
+    "created_at": "2019-06-13 11:56:18",
+    "updated_at": "2019-06-13 11:56:18",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 26,
+    "static_info_type_id": 11,
+    "static_info_title_kz": "Бесплатный пробный тест",
+    "static_info_title_ru": "Бесплатный пробный тест",
+    "created_at": "2019-06-13 11:56:30",
+    "updated_at": "2019-06-13 11:56:30",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 27,
+    "static_info_type_id": 12,
+    "static_info_title_kz": "Пробное тестирование",
+    "static_info_title_ru": "Пробное тестирование",
+    "created_at": "2019-06-13 11:56:41",
+    "updated_at": "2019-06-13 11:56:41",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 28,
+    "static_info_type_id": 13,
+    "static_info_title_kz": "Записаться на курс",
+    "static_info_title_ru": "Записаться на курс",
+    "created_at": "2019-06-13 11:56:54",
+    "updated_at": "2019-06-13 11:56:54",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 29,
+    "static_info_type_id": 14,
+    "static_info_title_kz": "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ",
+    "static_info_title_ru": "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ",
+    "created_at": "2019-06-13 11:57:09",
+    "updated_at": "2019-06-13 11:57:09",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 30,
+    "static_info_type_id": 15,
+    "static_info_title_kz": "ТРЕНЕРЫ",
+    "static_info_title_ru": "ТРЕНЕРЫ",
+    "created_at": "2019-06-13 11:57:21",
+    "updated_at": "2020-05-04 09:36:17",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 31,
+    "static_info_type_id": 16,
+    "static_info_title_kz": "Наши тренеры квалифицированные специалисты с опытом подготовки в ТОП школы",
+    "static_info_title_ru": "Наши тренеры квалифицированные специалисты с опытом подготовки в ТОП школы",
+    "created_at": "2019-06-13 11:57:36",
+    "updated_at": "2020-05-04 09:37:42",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 32,
+    "static_info_type_id": 9,
+    "static_info_title_kz": "Мы растём также быстро, как наши ученики показывают результаты.\r\n\r\nСегодня мы уже открыты и в Нур-Султане! ",
+    "static_info_title_ru": "Мы растём также быстро, как наши ученики показывают результаты.\r\n\r\nСегодня мы уже открыты и в Нур-Султане! ",
+    "created_at": "2019-06-13 11:58:47",
+    "updated_at": "2019-06-13 11:58:47",
+    "static_info_city_id": 1
+  },
+  {
+    "static_info_id": 33,
+    "static_info_type_id": 6,
+    "static_info_title_kz": "АБСОЛЮТНЫЙ РЕКОРДСМЕН ПО ПОСТУПЛЕНИЮ В НИШ,КТЛ",
+    "static_info_title_ru": "АБСОЛЮТНЫЙ РЕКОРДСМЕН ПО ПОСТУПЛЕНИЮ В НИШ,КТЛ",
+    "created_at": "2019-06-14 10:04:28",
+    "updated_at": "2019-06-14 10:04:28",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 34,
+    "static_info_type_id": 7,
+    "static_info_title_kz": "ЦЕНТР ПОДГОТОВКИ В НИШ, КТЛ, лицеи:",
+    "static_info_title_ru": "ЦЕНТР ПОДГОТОВКИ В НИШ, КТЛ, лицеи",
+    "created_at": "2019-06-14 10:07:01",
+    "updated_at": "2019-06-20 09:51:12",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 35,
+    "static_info_type_id": 8,
+    "static_info_title_kz": "Рекордсмен по поступлению в НИШ , КТЛ 2020",
+    "static_info_title_ru": "Рекордсмен по поступлению в НИШ , КТЛ 2020",
+    "created_at": "2019-06-14 10:07:35",
+    "updated_at": "2020-11-06 11:28:02",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 36,
+    "static_info_type_id": 9,
+    "static_info_title_kz": "Мы растём также быстро, как наши ученики показывают результаты.\r\n\r\nСегодня мы уже открыли 3 филиала в городе Шымкент!",
+    "static_info_title_ru": "Мы растём также быстро, как наши ученики показывают результаты.\r\n\r\nСегодня мы уже открыли 3 филиала в городе Шымкент!",
+    "created_at": "2019-06-14 10:08:01",
+    "updated_at": "2021-01-23 11:15:41",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 37,
+    "static_info_type_id": 10,
+    "static_info_title_kz": "Бесплатная консультация по программам",
+    "static_info_title_ru": "Бесплатная консультация по программам",
+    "created_at": "2019-06-14 10:08:16",
+    "updated_at": "2019-06-14 10:08:16",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 38,
+    "static_info_type_id": 11,
+    "static_info_title_kz": "Бесплатный пробный тест",
+    "static_info_title_ru": "Бесплатный пробный тест",
+    "created_at": "2019-06-14 10:08:38",
+    "updated_at": "2019-06-14 10:08:38",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 39,
+    "static_info_type_id": 12,
+    "static_info_title_kz": "Пробное тестирование",
+    "static_info_title_ru": "Пробное тестирование",
+    "created_at": "2019-06-14 10:08:54",
+    "updated_at": "2019-06-14 10:08:54",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 40,
+    "static_info_type_id": 13,
+    "static_info_title_kz": "Записаться на курс",
+    "static_info_title_ru": "Записаться на курс",
+    "created_at": "2019-06-14 10:09:05",
+    "updated_at": "2019-06-14 10:09:05",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 41,
+    "static_info_type_id": 14,
+    "static_info_title_kz": "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ",
+    "static_info_title_ru": "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ",
+    "created_at": "2019-06-14 10:09:15",
+    "updated_at": "2019-06-14 10:09:15",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 42,
+    "static_info_type_id": 15,
+    "static_info_title_kz": "ТРЕНЕРЫ",
+    "static_info_title_ru": "ТРЕНЕРЫ",
+    "created_at": "2019-06-14 10:09:26",
+    "updated_at": "2020-11-06 11:28:21",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 43,
+    "static_info_type_id": 16,
+    "static_info_title_kz": "Наши тренеры квалифицированные специалисты с опытом подготовки в ТОП школы ",
+    "static_info_title_ru": "Наши тренеры квалифицированные специалисты с опытом подготовки в ТОП школы ",
+    "created_at": "2019-06-14 10:09:40",
+    "updated_at": "2020-05-04 09:37:16",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 44,
+    "static_info_type_id": 1,
+    "static_info_title_kz": "https://www.facebook.com/aiplus.kz/",
+    "static_info_title_ru": "https://www.facebook.com/aiplus.kz/",
+    "created_at": "2019-06-17 04:33:09",
+    "updated_at": "2019-06-17 04:33:09",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 45,
+    "static_info_type_id": 2,
+    "static_info_title_kz": "https://www.instagram.com/aiplus.shymkent/",
+    "static_info_title_ru": "https://www.instagram.com/aiplus.shymkent/",
+    "created_at": "2019-06-17 04:33:30",
+    "updated_at": "2019-06-17 04:33:30",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 46,
+    "static_info_type_id": 3,
+    "static_info_title_kz": "https://www.youtube.com/channel/UCMWQAATR7-gNVHRj8jZTfog",
+    "static_info_title_ru": "https://www.youtube.com/channel/UCMWQAATR7-gNVHRj8jZTfog",
+    "created_at": "2019-06-17 04:33:44",
+    "updated_at": "2019-06-17 04:33:44",
+    "static_info_city_id": 3
+  },
+  {
+    "static_info_id": 47,
+    "static_info_type_id": 4,
+    "static_info_title_kz": "+7 708 287 0264 ",
+    "static_info_title_ru": "+7 708 287 0264 ",
+    "created_at": "2019-06-17 04:34:01",
+    "updated_at": "2020-08-03 04:40:02",
+    "static_info_city_id": 3
+  }
+]

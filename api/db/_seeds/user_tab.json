@@ -1,0 +1,16 @@
+[
+  {
+    "user_id": 1,
+    "fio": "Администратор",
+    "email": "admin@admin.com",
+    "password": "$2y$10$r0s6JC//Bnqfvd9zOJbAG.Mfq.atW6SueQ90ZUa3snIUmcKheJH.q",
+    "role_id": 1,
+    "is_blocked": 0,
+    "date_last_login": "2021-06-16 17:02:06",
+    "created_at": null,
+    "updated_at": "2021-06-16 11:02:06",
+    "password_changed_time": "2021-01-26 14:58:27",
+    "remember_token": "jP9FKxw2v0j2j0SeEMdgHd89pWd7Um21d1LlbUH4Tvn9FAh4EHOeMZHg67ht",
+    "image": "1520074721_user.jpeg"
+  }
+]

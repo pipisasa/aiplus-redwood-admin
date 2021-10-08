@@ -1,0 +1,107 @@
+[
+  {
+    "subject_id": 1,
+    "subject_title_kz": "Математика",
+    "subject_title_ru": "Математика",
+    "created_at": "2019-02-20 10:39:17",
+    "updated_at": "2019-05-17 13:07:04"
+  },
+  {
+    "subject_id": 2,
+    "subject_title_kz": "Ағылшын тілі",
+    "subject_title_ru": "Английский язык",
+    "created_at": "2019-02-20 10:39:31",
+    "updated_at": "2020-04-27 08:25:07"
+  },
+  {
+    "subject_id": 4,
+    "subject_title_kz": "Орыс тілі ",
+    "subject_title_ru": "Русский язык",
+    "created_at": "2019-02-20 10:39:48",
+    "updated_at": "2020-04-27 08:28:07"
+  },
+  {
+    "subject_id": 5,
+    "subject_title_kz": "Қазақ тілі ",
+    "subject_title_ru": "Казахский язык",
+    "created_at": "2019-02-20 10:39:55",
+    "updated_at": "2020-04-27 08:27:42"
+  },
+  {
+    "subject_id": 6,
+    "subject_title_kz": "Физика",
+    "subject_title_ru": "Физика",
+    "created_at": "2019-03-06 09:32:03",
+    "updated_at": "2019-03-06 09:32:03"
+  },
+  {
+    "subject_id": 7,
+    "subject_title_kz": "Логика",
+    "subject_title_ru": "Логика",
+    "created_at": "2019-03-06 09:32:12",
+    "updated_at": "2019-03-06 09:32:12"
+  },
+  {
+    "subject_id": 8,
+    "subject_title_kz": "Қазақстан тарихы",
+    "subject_title_ru": "История Казахстана",
+    "created_at": "2019-04-08 05:43:54",
+    "updated_at": "2020-04-27 08:27:19"
+  },
+  {
+    "subject_id": 9,
+    "subject_title_kz": "Химия",
+    "subject_title_ru": "Химия",
+    "created_at": "2019-04-08 05:44:02",
+    "updated_at": "2019-04-08 05:44:02"
+  },
+  {
+    "subject_id": 10,
+    "subject_title_kz": "Әлем тарихы ",
+    "subject_title_ru": "История мира",
+    "created_at": "2019-04-08 05:44:09",
+    "updated_at": "2020-04-27 08:27:34"
+  },
+  {
+    "subject_id": 11,
+    "subject_title_kz": "Биология",
+    "subject_title_ru": "Биология",
+    "created_at": "2019-05-17 12:34:31",
+    "updated_at": "2019-05-17 12:34:31"
+  },
+  {
+    "subject_id": 12,
+    "subject_title_kz": "География",
+    "subject_title_ru": "География",
+    "created_at": "2019-05-17 12:34:39",
+    "updated_at": "2019-05-17 12:34:39"
+  },
+  {
+    "subject_id": 13,
+    "subject_title_kz": "Дүниежүзі тарихы",
+    "subject_title_ru": "Всемирная история",
+    "created_at": "2019-05-17 12:34:49",
+    "updated_at": "2020-04-27 08:25:31"
+  },
+  {
+    "subject_id": 14,
+    "subject_title_kz": "Математикалық сауаттылық ",
+    "subject_title_ru": "Математическая грамотность",
+    "created_at": "2020-01-27 06:02:28",
+    "updated_at": "2020-04-27 08:27:56"
+  },
+  {
+    "subject_id": 15,
+    "subject_title_kz": "Оқу сауаттылығы",
+    "subject_title_ru": "Грамотность чтения",
+    "created_at": "2020-01-27 06:02:49",
+    "updated_at": "2020-04-27 08:27:08"
+  },
+  {
+    "subject_id": 16,
+    "subject_title_kz": "Адам. Қоғам. Құқық",
+    "subject_title_ru": "Человек. Общество. Право ",
+    "created_at": "2020-01-27 06:02:56",
+    "updated_at": "2020-04-27 08:28:33"
+  }
+]
