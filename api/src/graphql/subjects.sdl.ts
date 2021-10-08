@@ -12,7 +12,7 @@ export const schema = gql`
   }
 
   type Query {
-    subjects: [Subject!]! @requireAuth
+    subjects: [Subject!]! @skipAuth
   }
 
   input CreateSubjectInput {

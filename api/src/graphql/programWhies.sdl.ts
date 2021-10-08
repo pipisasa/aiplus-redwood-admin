@@ -11,7 +11,7 @@ export const schema = gql`
   }
 
   type Query {
-    programWhies: [ProgramWhy!]! @requireAuth
+    programWhies: [ProgramWhy!]! @skipAuth
   }
 
   input CreateProgramWhyInput {

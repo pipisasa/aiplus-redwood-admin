@@ -10,7 +10,7 @@ export const schema = gql`
   }
 
   type Query {
-    teachers: [Teacher!]! @requireAuth
+    teachers: [Teacher!]! @skipAuth
   }
 
   input CreateTeacherInput {

@@ -9,7 +9,7 @@ export const schema = gql`
   }
 
   type Query {
-    programSubjects: [ProgramSubject!]! @requireAuth
+    programSubjects: [ProgramSubject!]! @skipAuth
   }
 
   input CreateProgramSubjectInput {

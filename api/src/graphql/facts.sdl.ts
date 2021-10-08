@@ -10,8 +10,8 @@ export const schema = gql`
   }
 
   type Query {
-    facts: [Fact!]! @requireAuth
-    fact(id: Int!): Fact @requireAuth
+    facts: [Fact!]! @skipAuth
+    fact(id: Int!): Fact @skipAuth
   }
 
   input CreateFactInput {

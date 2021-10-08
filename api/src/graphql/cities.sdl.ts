@@ -9,8 +9,8 @@ export const schema = gql`
   }
 
   type Query {
-    cities: [City!]! @requireAuth
-    city(id: Int!): City @requireAuth
+    cities: [City!]! @skipAuth
+    city(id: Int!): City @skipAuth
   }
 
   input CreateCityInput {

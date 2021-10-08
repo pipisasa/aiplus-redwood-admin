@@ -38,8 +38,8 @@ export const schema = gql`
   }
 
   type Query {
-    programs: [Program!]! @requireAuth
-    program(id: Int!): Program @requireAuth
+    programs: [Program!]! @skipAuth
+    program(id: Int!): Program @skipAuth
   }
 
   input CreateProgramInput {

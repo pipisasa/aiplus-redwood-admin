@@ -12,7 +12,7 @@ export const schema = gql`
   }
 
   type Query {
-    programBenefits: [ProgramBenefit!]! @requireAuth
+    programBenefits: [ProgramBenefit!]! @skipAuth
   }
 
   input CreateProgramBenefitInput {

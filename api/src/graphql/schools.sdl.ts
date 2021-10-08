@@ -16,7 +16,7 @@ export const schema = gql`
   }
 
   type Query {
-    schools: [School!]! @requireAuth
+    schools: [School!]! @skipAuth
   }
 
   input CreateSchoolInput {
