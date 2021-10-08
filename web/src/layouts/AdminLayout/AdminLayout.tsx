@@ -22,34 +22,34 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
           <Link to={routes.home()} className="rw-link">
-            Home
+            Главная
           </Link>
         </h1>
         <nav className="rw-nav">
           <ul>
             <li>
               <Link to={routes.faqs()} className="rw-link">
-                Faqs
+                FAQ
               </Link>
             </li>
             <li>
               <Link to={routes.facts()} className="rw-link">
-                Facts
+                ФАКТЫ
               </Link>
             </li>
             <li>
               <Link to={routes.programs()} className="rw-link">
-                Programs
+                ПРОГРАММЫ
               </Link>
             </li>
             <li>
               <Link to={routes.cities()} className="rw-link">
-                Cities
+                ГОРОДА
               </Link>
             </li>
             <li>
               <Link to={routes.students()} className="rw-link">
-                Students
+                СТУДЕНТЫ
               </Link>
             </li>
             <li>
@@ -57,7 +57,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
                 className="rw-button rw-button-green"
                 onClick={() => logOut()}
               >
-                <div className="rw-button-icon"></div> Logout
+                <div className="rw-button-icon"></div> ВЫЙТИ
               </button>
             </li>
           </ul>
