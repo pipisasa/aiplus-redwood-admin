@@ -3,6 +3,7 @@ import { toast } from '@redwoodjs/web/toast'
 import { Link, routes } from '@redwoodjs/router'
 
 import { QUERY } from 'src/components/Student/StudentsCell'
+import { imageTag } from 'src/components/Image'
 
 const DELETE_STUDENT_MUTATION = gql`
   mutation DeleteStudentMutation($id: Int!) {
@@ -22,9 +23,9 @@ const truncate = (text) => {
   return output
 }
 
-const jsonTruncate = (obj) => {
-  return truncate(JSON.stringify(obj, null, 2))
-}
+// const jsonTruncate = (obj) => {
+//   return truncate(JSON.stringify(obj, null, 2))
+// }
 
 const timeTag = (datetime) => {
   return (
@@ -34,9 +35,9 @@ const timeTag = (datetime) => {
   )
 }
 
-const checkboxInputTag = (checked) => {
-  return <input type="checkbox" checked={checked} disabled />
-}
+// const checkboxInputTag = (checked) => {
+//   return <input type="checkbox" checked={checked} disabled />
+// }
 
 const StudentsList = ({ students }) => {
   const [deleteStudent] = useMutation(DELETE_STUDENT_MUTATION, {
@@ -95,7 +96,7 @@ const StudentsList = ({ students }) => {
               <td>{truncate(student.id)}</td>
               <td>{truncate(student.fioKz)}</td>
               <td>{truncate(student.fioRu)}</td>
-              <td>{truncate(student.image)}</td>
+              <td>{imageTag(student.image)}</td>
               <td>{truncate(student.beforeBallCount)}</td>
               <td>{truncate(student.afterBallCount)}</td>
               <td>{truncate(student.orderNum)}</td>

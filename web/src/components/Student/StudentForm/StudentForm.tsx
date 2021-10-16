@@ -8,6 +8,7 @@ import {
   DatetimeLocalField,
   Submit,
 } from '@redwoodjs/forms'
+import { ImageField, useImageField } from 'src/components/Image'
 
 const formatDatetime = (value) => {
   if (value) {
@@ -16,8 +17,12 @@ const formatDatetime = (value) => {
 }
 
 const StudentForm = (props) => {
+  const { dataWithImage, imageFliedProps } = useImageField({
+    defaultImage: props?.student?.image,
+    name: 'image',
+  })
   const onSubmit = (data) => {
-    props.onSave(data, props?.student?.id)
+    props.onSave(dataWithImage(data), props?.student?.id)
   }
 
   return (
@@ -62,21 +67,7 @@ const StudentForm = (props) => {
         />
         <FieldError name="fioRu" className="rw-field-error" />
 
-        <Label
-          name="image"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Image
-        </Label>
-        <TextField
-          name="image"
-          defaultValue={props.student?.image}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
-        <FieldError name="image" className="rw-field-error" />
+        <ImageField {...imageFliedProps} />
 
         <Label
           name="beforeBallCount"
@@ -335,10 +326,7 @@ const StudentForm = (props) => {
         <FieldError name="cityId" className="rw-field-error" />
 
         <div className="rw-button-group">
-          <Submit
-            disabled={props.loading}
-            className="rw-button rw-button-blue"
-          >
+          <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save
           </Submit>
         </div>

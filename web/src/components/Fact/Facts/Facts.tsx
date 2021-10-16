@@ -3,6 +3,7 @@ import { toast } from '@redwoodjs/web/toast'
 import { Link, routes } from '@redwoodjs/router'
 
 import { QUERY } from 'src/components/Fact/FactsCell'
+import { imageTag } from 'src/components/Image'
 
 const DELETE_FACT_MUTATION = gql`
   mutation DeleteFactMutation($id: Int!) {
@@ -21,16 +22,6 @@ const truncate = (text) => {
   }
   return output
 }
-
-const imageTag = (url) => (
-  <img
-    width={100}
-    height={100}
-    style={{ objectFit: 'contain' }}
-    src={url}
-    alt={url}
-  />
-)
 
 // const jsonTruncate = (obj) => {
 //   return truncate(JSON.stringify(obj, null, 2))

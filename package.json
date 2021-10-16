@@ -7,6 +7,9 @@
       "packages/*"
     ]
   },
+  "scripts": {
+    "dump": "node api/db/dump.js"
+  },
   "devDependencies": {
     "@redwoodjs/core": "0.37.2"
   },

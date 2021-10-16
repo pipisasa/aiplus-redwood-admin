@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "titleRu": "Рекордсмены по поступлению в НИШ 2020: из 456 грантов 223 Айплюсовца",
+    "titleKz": "НЗМ-ға түсуден көшбасшы (рекорд жасаушы): 2019 жылы 222 оқушы түсті",
+    "orderNumber": 1,
+    "image": "https://cdn.filestackcontent.com/aB6nZMJBQze5eED0fI9p",
+    "createdAt": "2021-10-15T00:31:07.755Z",
+    "updatedAt": "2021-10-15T11:51:22.033Z"
+  },
+  {
+    "id": 2,
+    "titleRu": "Каждый второй ученик НИШ обучался у нас",
+    "titleKz": "НЗМ-ның әр екінші оқушысы бізде оқыған.",
+    "orderNumber": 2,
+    "image": "https://cdn.filestackcontent.com/MfZZsod8Q2yEjK3QmN2a",
+    "createdAt": "2021-10-15T00:31:07.755Z",
+    "updatedAt": "2021-10-15T11:52:07.541Z"
+  },
+  {
+    "id": 3,
+    "titleRu": "От нас поступило больше детей, чем от 100 центров Алматы вместе взятых",
+    "titleKz": "Түскен оқушылардың саны бізде екі есе көп, тіпті Алматының 100  оқу орталығын қосып есептесе.",
+    "orderNumber": 3,
+    "image": "https://cdn.filestackcontent.com/Z5orIyOETaqrdhFdDCTK",
+    "createdAt": "2021-10-15T00:31:07.755Z",
+    "updatedAt": "2021-10-15T11:52:50.704Z"
+  },
+  {
+    "id": 4,
+    "titleRu": "Авторская программа от учителей НИШ",
+    "titleKz": "НЗМ-ның мұғалімдерінен авторлық бағдарлама ",
+    "orderNumber": 4,
+    "image": "https://cdn.filestackcontent.com/SYdLGFKTHqLmU5c4gT5Y",
+    "createdAt": "2021-10-15T00:31:07.755Z",
+    "updatedAt": "2021-10-15T11:53:33.918Z"
+  },
+  {
+    "id": 5,
+    "titleRu": "Система мотивации для ребенка",
+    "titleKz": "Оқушыны ынталандыру жүйесі ",
+    "orderNumber": 5,
+    "image": "https://cdn.filestackcontent.com/xticrAHKTt6h0CLx8R2p",
+    "createdAt": "2021-10-15T00:31:07.755Z",
+    "updatedAt": "2021-10-15T11:53:58.394Z"
+  },
+  {
+    "id": 6,
+    "titleRu": "Группы до 10 человек",
+    "titleKz": "Топта 10 оқушыға дейін ",
+    "orderNumber": 6,
+    "image": "https://cdn.filestackcontent.com/kjjRTI9pTy64Ww1xJnFg",
+    "createdAt": "2021-10-15T00:31:07.755Z",
+    "updatedAt": "2021-10-15T11:54:32.289Z"
+  }
+]

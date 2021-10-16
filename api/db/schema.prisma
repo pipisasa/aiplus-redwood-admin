@@ -1,74 +1,35 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native"]
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider      = "prisma-client-js"
-  binaryTargets = "native"
-}
-
 model User {
-  id             Int      @id @default(autoincrement())
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id             Int       @id @default(autoincrement())
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
   name           String?
-  email          String   @unique
-  hashedPassword String   @default("")
-  salt           String   @default("")
-  role           String   @default("USER")
-
-  // tokens   Token[]
-  // sessions Session[]
+  salt           String?   @default("")
+  email          String    @unique
+  hashedPassword String?
+  role           String    @default("USER")
+  Session        Session[]
+  Token          Token[]
 }
-
-// model Session {
-//   id                 Int       @id @default(autoincrement())
-//   createdAt          DateTime  @default(now())
-//   updatedAt          DateTime  @updatedAt
-//   expiresAt          DateTime?
-//   handle             String    @unique
-//   hashedSessionToken String?
-//   antiCSRFToken      String?
-//   publicData         String?
-//   privateData        String?
-
-//   // user   User? @relation(fields: [userId], references: [id])
-//   // userId Int?
-// }
-
-// model Token {
-//   id          Int      @id @default(autoincrement())
-//   createdAt   DateTime @default(now())
-//   updatedAt   DateTime @updatedAt
-//   hashedToken String
-//   type        String
-//   // See note below about TokenType enum
-//   // type        TokenType
-//   expiresAt   DateTime
-//   sentTo      String
-
-//   // user   User @relation(fields: [userId], references: [id])
-//   // userId Int
-
-//   @@unique([hashedToken, type])
-// }
-
-// NOTE: It's highly recommended to use an enum for the token type
-//       but enums only work in Postgres.
-//       See: https://blitzjs.com/docs/database-overview#switch-to-postgresql
-// enum TokenType {
-//   RESET_PASSWORD
-// }
 
 model City {
   id        Int       @id @default(autoincrement())
   name      String    @db.VarChar(255)
-  schools   School[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   Program   Program[]
+  schools   School[]
   Student   Student[]
+  Teacher   Teacher[]
 }
 
 model Faq {
@@ -93,7 +54,6 @@ model Fact {
 
 model School {
   id            Int       @id @default(autoincrement())
-  city          City      @relation(fields: [cityId], references: [id])
   cityId        Int
   titleEn       String    @db.VarChar(255)
   titleRu       String    @db.VarChar(255)
@@ -101,10 +61,10 @@ model School {
   descriptionEn String
   descriptionRu String
   descriptionKz String
-  programs      Program[]
-  // students      Student[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+  city          City      @relation(fields: [cityId], references: [id])
+  programs      Program[]
 }
 
 model Program {
@@ -117,7 +77,6 @@ model Program {
   fullSchoolNameKz     String?          @db.VarChar(255)
   subTitleRu           String?          @db.VarChar(255)
   subTitleKz           String?          @db.VarChar(255)
-  city                 City             @relation(fields: [cityId], references: [id])
   titleAtRootRu        String?          @db.VarChar(255)
   titleAtRootKz        String?          @db.VarChar(255)
   titleAtRootHoverRu   String?          @db.VarChar(255)
@@ -137,12 +96,13 @@ model Program {
   textWhyRu            String?
   createdAt            DateTime         @default(now())
   updatedAt            DateTime         @updatedAt
-  School               School?          @relation(fields: [schoolId], references: [id])
   schoolId             Int?
-  ProgramBenefits      ProgramBenefit[]
-  ProgramWhy           ProgramWhy[]
-  ProgramSubject       ProgramSubject[]
   cityId               Int
+  city                 City             @relation(fields: [cityId], references: [id])
+  School               School?          @relation(fields: [schoolId], references: [id])
+  ProgramBenefits      ProgramBenefit[]
+  ProgramSubject       ProgramSubject[]
+  ProgramWhy           ProgramWhy[]
   Student              Student[]
 }
 
@@ -167,10 +127,10 @@ model Student {
   year             DateTime
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
-  program          Program  @relation(fields: [programId], references: [id])
   programId        Int
-  city             City     @relation(fields: [cityId], references: [id])
   cityId           Int
+  city             City     @relation(fields: [cityId], references: [id])
+  program          Program  @relation(fields: [programId], references: [id])
 }
 
 model Subject {
@@ -179,15 +139,14 @@ model Subject {
   titleKz        String           @db.VarChar(255)
   descriptionRu  String?
   descriptionKz  String?
-  schools        Teacher[]
   createdAt      DateTime         @default(now())
   updatedAt      DateTime         @updatedAt
   ProgramSubject ProgramSubject[]
+  teachers       Teacher[]
 }
 
 model ProgramBenefit {
   id          Int      @id @default(autoincrement())
-  program     Program  @relation(fields: [programId], references: [id])
   titleKz     String?  @db.VarChar(255)
   titleRu     String?  @db.VarChar(255)
   orderNumber Int?     @default(0)
@@ -195,39 +154,52 @@ model ProgramBenefit {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   programId   Int
+  program     Program  @relation(fields: [programId], references: [id])
 }
 
 model ProgramWhy {
   id          Int      @id @default(autoincrement())
-  program     Program  @relation(fields: [programId], references: [id])
   textKz      String
   textRu      String
   orderNumber Int?     @default(0)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   programId   Int
+  program     Program  @relation(fields: [programId], references: [id])
 }
 
 model ProgramSubject {
   id          Int     @id @default(autoincrement())
   orderNumber Int     @default(0)
-  program     Program @relation(fields: [programId], references: [id])
-  subject     Subject @relation(fields: [subjectId], references: [id])
   programId   Int
   subjectId   Int
+  program     Program @relation(fields: [programId], references: [id])
+  subject     Subject @relation(fields: [subjectId], references: [id])
 
-  @@unique([programId, subjectId])
+  @@unique([programId, subjectId], name: "ProgramSubject_programId_subjectId_key")
 }
 
 model Teacher {
-  id        Int      @id @default(autoincrement())
-  subject   Subject? @relation(fields: [subjectId], references: [id])
-  subjectId Int?
-  firstName String   @db.VarChar(255)
-  lastName  String   @db.VarChar(255)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  // images    Image[] @relation("teacherImages")
+  id             Int      @id @default(autoincrement())
+  fioKz          String
+  fioRu          String
+  sloganKz       String
+  sloganRu       String
+  image          String
+  image2         String
+  youtubeVideoId String
+  orderNum       Int
+  urlName        String
+  textKz         String
+  textRu         String
+  subtitleKz     String
+  subtitleRu     String
+  cityId         Int
+  city           City     @relation(fields: [cityId], references: [id])
+  subjectId      Int?
+  subject        Subject?  @relation(fields: [subjectId], references: [id])
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
 
 model Feature {
@@ -236,31 +208,47 @@ model Feature {
   titleRu       String   @db.VarChar(255)
   descriptionKz String
   descriptionRu String
+  orderNum      Int?     @default(0)
   image         String?  @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
-  // images    Image[] @relation("featureImages")
 }
 
-// model Image {
-//   id          Int      @id @default(autoincrement())
-//   title       String?
-//   size        Int?
-//   contentType String?
-//   url         String
-//   student     Student? @relation("studentImages", fields: [studentId], references: [id])
-//   studentId   Int?
-//   // feature     Feature? @relation("featureImages", fields: [featureId], references: [id])
-//   // featureId   Int?
-//   // teacher     Teacher? @relation("teacherImages", fields: [teacherId], references: [id])
-//   // teacherId   Int?
-//   createdAt   DateTime @default(now())
-//   updatedAt   DateTime @updatedAt
-// }
+model Project {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+}
 
-model RW_DataMigration {
-  version    String   @id
-  name       String
-  startedAt  DateTime
-  finishedAt DateTime
+model Session {
+  id                 Int       @id @default(autoincrement())
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime
+  expiresAt          DateTime?
+  handle             String    @unique
+  hashedSessionToken String?
+  antiCSRFToken      String?
+  publicData         String?
+  privateData        String?
+  userId             Int?
+  User               User?     @relation(fields: [userId], references: [id])
+}
+
+model Token {
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime
+  hashedToken String
+  type        TokenType
+  expiresAt   DateTime
+  sentTo      String
+  userId      Int
+  User        User      @relation(fields: [userId], references: [id])
+
+  @@unique([hashedToken, type], name: "Token_hashedToken_type_key")
+}
+
+enum TokenType {
+  RESET_PASSWORD
 }

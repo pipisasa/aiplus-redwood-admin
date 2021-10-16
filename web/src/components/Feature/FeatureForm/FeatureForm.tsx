@@ -6,7 +6,7 @@ import {
   TextField,
   Submit,
 } from '@redwoodjs/forms'
-import ImageInput from 'src/components/Form/ImageInput'
+import { ImageField, useImageField } from 'src/components/Image'
 
 // const formatDatetime = (value) => {
 //   if (value) {
@@ -15,17 +15,13 @@ import ImageInput from 'src/components/Form/ImageInput'
 // }
 
 const FeatureForm = (props) => {
-  const [image, setImage] = React.useState('')
+  const { dataWithImage, imageFliedProps } = useImageField({
+    defaultImage: props?.feature?.image,
+    name: 'image',
+  })
   const onSubmit = (data) => {
-    props.onSave(
-      {
-        ...data,
-        image,
-      },
-      props?.fact?.id
-    )
+    props.onSave(dataWithImage(data), props?.feature?.id)
   }
-
   return (
     <div className="rw-form-wrapper">
       <Form onSubmit={onSubmit} error={props.error}>
@@ -100,15 +96,7 @@ const FeatureForm = (props) => {
         />
         <FieldError name="descriptionRu" className="rw-field-error" />
 
-        <Label
-          name="image"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Image
-        </Label>
-        <ImageInput onUploaded={(imgs) => setImage(imgs?.[0]?.url || '')} />
-        <FieldError name="image" className="rw-field-error" />
+        <ImageField {...imageFliedProps} />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

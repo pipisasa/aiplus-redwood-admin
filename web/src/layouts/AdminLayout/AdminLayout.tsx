@@ -34,22 +34,32 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
             </li>
             <li>
               <Link to={routes.facts()} className="rw-link">
-                ФАКТЫ
+                Факты
               </Link>
             </li>
             <li>
               <Link to={routes.programs()} className="rw-link">
-                ПРОГРАММЫ
+                программы
               </Link>
             </li>
             <li>
               <Link to={routes.cities()} className="rw-link">
-                ГОРОДА
+                города
               </Link>
             </li>
             <li>
               <Link to={routes.students()} className="rw-link">
-                СТУДЕНТЫ
+                Студенты
+              </Link>
+            </li>
+            <li>
+              <Link to={routes.teachers()} className="rw-link">
+                Учителя
+              </Link>
+            </li>
+            <li>
+              <Link to={routes.features()} className="rw-link">
+                Наши особенности
               </Link>
             </li>
             <li>

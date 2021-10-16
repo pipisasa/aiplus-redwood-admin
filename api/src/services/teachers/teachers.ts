@@ -13,7 +13,34 @@ export const teacher = ({ id }: Prisma.TeacherWhereUniqueInput) => {
   })
 }
 
+interface CreateTeacherArgs {
+  input: Prisma.TeacherCreateInput
+}
+
+export const createTeacher = ({ input }: CreateTeacherArgs) => {
+  return db.teacher.create({
+    data: input,
+  })
+}
+
+interface UpdateTeacherArgs extends Prisma.TeacherWhereUniqueInput {
+  input: Prisma.TeacherUpdateInput
+}
+
+export const updateTeacher = ({ id, input }: UpdateTeacherArgs) => {
+  return db.teacher.update({
+    data: input,
+    where: { id },
+  })
+}
+
+export const deleteTeacher = ({ id }: Prisma.TeacherWhereUniqueInput) => {
+  return db.teacher.delete({
+    where: { id },
+  })
+}
+
 export const Teacher = {
-  subject: (_obj, { root }: ResolverArgs<ReturnType<typeof teacher>>) =>
-    db.teacher.findUnique({ where: { id: root.id } }).subject(),
+  city: (_obj, { root }: ResolverArgs<ReturnType<typeof teacher>>) =>
+    db.teacher.findUnique({ where: { id: root.id } }).city(),
 }

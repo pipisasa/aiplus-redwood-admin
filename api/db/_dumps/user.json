@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "createdAt": "2021-10-15T00:30:14.927Z",
+    "updatedAt": "2021-10-15T00:30:14.928Z",
+    "name": null,
+    "salt": "39ae6497e37215b39ede66605e9bfbcd",
+    "email": "admin@admin.com",
+    "hashedPassword": "0e3801bd2bd7a2ddc68a787cffec83b22c30549bcb6954fac39d4a1279f14b10",
+    "role": "USER"
+  }
+]

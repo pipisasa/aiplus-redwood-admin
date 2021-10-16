@@ -7,11 +7,11 @@ import {
   Submit,
 } from '@redwoodjs/forms'
 
-const formatDatetime = (value) => {
-  if (value) {
-    return value.replace(/:\d{2}\.\d{3}\w/, '')
-  }
-}
+// const formatDatetime = (value) => {
+//   if (value) {
+//     return value.replace(/:\d{2}\.\d{3}\w/, '')
+//   }
+// }
 
 const CityForm = (props) => {
   const onSubmit = (data) => {
@@ -45,10 +45,7 @@ const CityForm = (props) => {
         <FieldError name="name" className="rw-field-error" />
 
         <div className="rw-button-group">
-          <Submit
-            disabled={props.loading}
-            className="rw-button rw-button-blue"
-          >
+          <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save
           </Submit>
         </div>
