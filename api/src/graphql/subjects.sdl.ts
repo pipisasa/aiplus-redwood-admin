@@ -5,14 +5,15 @@ export const schema = gql`
     titleKz: String!
     descriptionRu: String
     descriptionKz: String
-    schools: [Teacher]!
     createdAt: DateTime!
     updatedAt: DateTime!
     ProgramSubject: [ProgramSubject]!
+    teachers: [Teacher]!
   }
 
   type Query {
-    subjects: [Subject!]! @skipAuth
+    subjects: [Subject!]! @requireAuth
+    subject(id: Int!): Subject @requireAuth
   }
 
   input CreateSubjectInput {
@@ -27,5 +28,11 @@ export const schema = gql`
     titleKz: String
     descriptionRu: String
     descriptionKz: String
+  }
+
+  type Mutation {
+    createSubject(input: CreateSubjectInput!): Subject! @requireAuth
+    updateSubject(id: Int!, input: UpdateSubjectInput!): Subject! @requireAuth
+    deleteSubject(id: Int!): Subject! @requireAuth
   }
 `

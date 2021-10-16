@@ -58,6 +58,11 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
               </Link>
             </li>
             <li>
+              <Link to={routes.subjects()} className="rw-link">
+                Кафедры
+              </Link>
+            </li>
+            <li>
               <Link to={routes.features()} className="rw-link">
                 Наши особенности
               </Link>

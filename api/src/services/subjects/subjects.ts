@@ -13,9 +13,36 @@ export const subject = ({ id }: Prisma.SubjectWhereUniqueInput) => {
   })
 }
 
+interface CreateSubjectArgs {
+  input: Prisma.SubjectCreateInput
+}
+
+export const createSubject = ({ input }: CreateSubjectArgs) => {
+  return db.subject.create({
+    data: input,
+  })
+}
+
+interface UpdateSubjectArgs extends Prisma.SubjectWhereUniqueInput {
+  input: Prisma.SubjectUpdateInput
+}
+
+export const updateSubject = ({ id, input }: UpdateSubjectArgs) => {
+  return db.subject.update({
+    data: input,
+    where: { id },
+  })
+}
+
+export const deleteSubject = ({ id }: Prisma.SubjectWhereUniqueInput) => {
+  return db.subject.delete({
+    where: { id },
+  })
+}
+
 export const Subject = {
-  schools: (_obj, { root }: ResolverArgs<ReturnType<typeof subject>>) =>
-    db.subject.findUnique({ where: { id: root.id } }).schools(),
   ProgramSubject: (_obj, { root }: ResolverArgs<ReturnType<typeof subject>>) =>
     db.subject.findUnique({ where: { id: root.id } }).ProgramSubject(),
+  teachers: (_obj, { root }: ResolverArgs<ReturnType<typeof subject>>) =>
+    db.subject.findUnique({ where: { id: root.id } }).teachers(),
 }

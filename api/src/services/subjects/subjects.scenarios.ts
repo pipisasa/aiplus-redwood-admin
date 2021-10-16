@@ -6,14 +6,14 @@ export const standard = defineScenario<Prisma.SubjectCreateArgs>({
       data: {
         titleRu: 'String',
         titleKz: 'String',
-        updatedAt: '2021-10-07T05:41:21Z',
+        updatedAt: '2021-10-16T08:57:50Z',
       },
     },
     two: {
       data: {
         titleRu: 'String',
         titleKz: 'String',
-        updatedAt: '2021-10-07T05:41:21Z',
+        updatedAt: '2021-10-16T08:57:50Z',
       },
     },
   },

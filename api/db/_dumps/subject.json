@@ -1,1 +1,137 @@
-[]
+[
+  {
+    "id": 1,
+    "titleRu": "Математика",
+    "titleKz": "Математика",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 2,
+    "titleRu": "Английский язык",
+    "titleKz": "Ағылшын тілі",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 4,
+    "titleRu": "Русский язык",
+    "titleKz": "Орыс тілі ",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 5,
+    "titleRu": "Казахский язык",
+    "titleKz": "Қазақ тілі ",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 6,
+    "titleRu": "Физика",
+    "titleKz": "Физика",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 7,
+    "titleRu": "Логика",
+    "titleKz": "Логика",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 8,
+    "titleRu": "История Казахстана",
+    "titleKz": "Қазақстан тарихы",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 9,
+    "titleRu": "Химия",
+    "titleKz": "Химия",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.063Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 10,
+    "titleRu": "История мира",
+    "titleKz": "Әлем тарихы ",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 11,
+    "titleRu": "Биология",
+    "titleKz": "Биология",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 12,
+    "titleRu": "География",
+    "titleKz": "География",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 13,
+    "titleRu": "Всемирная история",
+    "titleKz": "Дүниежүзі тарихы",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 14,
+    "titleRu": "Математическая грамотность",
+    "titleKz": "Математикалық сауаттылық ",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 15,
+    "titleRu": "Грамотность чтения",
+    "titleKz": "Оқу сауаттылығы",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  },
+  {
+    "id": 16,
+    "titleRu": "Человек. Общество. Право ",
+    "titleKz": "Адам. Қоғам. Құқық",
+    "descriptionRu": "",
+    "descriptionKz": "",
+    "createdAt": "2021-10-16T09:03:57.064Z",
+    "updatedAt": "2021-10-16T09:03:57.065Z"
+  }
+]

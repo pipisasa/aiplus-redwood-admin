@@ -7,37 +7,57 @@ const db = new PrismaClient()
 
 async function main() {
   console.warn('Please define your seed data.')
-  const teachers = require('./_seeds/teacher_tab.json')
+  const subjects = require('./_seeds/subject_tab.json')
 
-  const formatedTeachers = teachers.map(item=>({
-    id: item.teacher_id,
-    fioKz: item.teacher_fio_kz,
-    fioRu: item.teacher_fio_ru,
-    textKz: item.teacher_text_kz,
-    textRu: item.teacher_text_ru,
-    subtitleKz: item.slider_subtitle_kz,
-    subtitleRu: item.slider_subtitle_ru,
-    sloganKz: item.teacher_slogan_kz,
-    sloganRu: item.teacher_slogan_ru,
-    image: item.teacher_img,
-    image2: item.teacher_img2,
-    youtubeVideoId: item.teacher_interview_youtube_id,
-    orderNum: item.order_num,
-    urlName: item.teacher_url_name,
-    cityId: item.teacher_city_id,
-  }));
+  const formatedSubjects = subjects.map(item=>({
+    id: item.subject_id,
+    titleKz: item.subject_title_kz,
+    titleRu: item.subject_title_ru,
+    descriptionKz: "",
+    descriptionRu: "",
+  }))
 
   try {
-    // await db.teacher.deleteMany({
-    //   where: { id: true }
-    // })
-    await db.teacher.createMany({
-      data: formatedTeachers,
+    console.log("subjects uploading...")
+    await db.subject.createMany({
+      data: formatedSubjects,
     })
-    console.log("teachers uploaded!")
+    console.log("subjects uploaded!")
   } catch (error) {
-    console.log(error)
+
   }
+
+  // const teachers = require('./_seeds/teacher_tab.json')
+
+  // const formatedTeachers = teachers.map(item=>({
+  //   id: item.teacher_id,
+  //   fioKz: item.teacher_fio_kz,
+  //   fioRu: item.teacher_fio_ru,
+  //   textKz: item.teacher_text_kz,
+  //   textRu: item.teacher_text_ru,
+  //   subtitleKz: item.slider_subtitle_kz,
+  //   subtitleRu: item.slider_subtitle_ru,
+  //   sloganKz: item.teacher_slogan_kz,
+  //   sloganRu: item.teacher_slogan_ru,
+  //   image: item.teacher_img,
+  //   image2: item.teacher_img2,
+  //   youtubeVideoId: item.teacher_interview_youtube_id,
+  //   orderNum: item.order_num,
+  //   urlName: item.teacher_url_name,
+  //   cityId: item.teacher_city_id,
+  // }));
+
+  // try {
+  //   // await db.teacher.deleteMany({
+  //   //   where: { id: true }
+  //   // })
+  //   await db.teacher.createMany({
+  //     data: formatedTeachers,
+  //   })
+  //   console.log("teachers uploaded!")
+  // } catch (error) {
+  //   console.log(error)
+  // }
 }
 
 /*
