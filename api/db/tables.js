@@ -1,10 +1,12 @@
+/* eslint-disable */
+
 module.exports = [
-  'student',
   'city',
+  'fact',
   'faq',
   'feature',
+  'menuItem',
   'program',
-  'fact',
   'programBenefit',
   'programSubject',
   'programWhy',

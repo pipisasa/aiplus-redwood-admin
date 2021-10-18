@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "titleRu": "Программы",
+    "titleKz": "БАҒДАРЛАМАЛАР",
+    "link": "/programs",
+    "orderNumber": 1,
+    "parentId": null
+  },
+  {
+    "id": 2,
+    "titleRu": "Тренеры",
+    "titleKz": "ТРЕНЕРЛЕР",
+    "link": "/teachers",
+    "orderNumber": 2,
+    "parentId": null
+  },
+  {
+    "id": 3,
+    "titleRu": "Гордость центра",
+    "titleKz": "ОРТАЛЫҚТЫҢ МАҚТАНЫШТАРЫ",
+    "link": "/students",
+    "orderNumber": 3,
+    "parentId": null
+  },
+  {
+    "id": 4,
+    "titleRu": "Вопросы",
+    "titleKz": "СҰРАҚТАР",
+    "link": "/faq",
+    "orderNumber": 4,
+    "parentId": null
+  },
+  {
+    "id": 5,
+    "titleRu": "Блог",
+    "titleKz": "Блог",
+    "link": "/blog",
+    "orderNumber": 5,
+    "parentId": null
+  },
+  {
+    "id": 6,
+    "titleRu": "Контакты",
+    "titleKz": "БАЙЛАНЫС",
+    "link": "/contacts",
+    "orderNumber": 6,
+    "parentId": null
+  },
+  {
+    "id": 7,
+    "titleRu": "Отзывы",
+    "titleKz": "ПІКІРЛЕР",
+    "link": "/reviews",
+    "orderNumber": 7,
+    "parentId": null
+  },
+  {
+    "id": 8,
+    "titleRu": "ПОДГОТОВКА В НИШ",
+    "titleKz": "НЗМ-ҒА ДАЙЫНДЫҚ",
+    "link": "/programs/2",
+    "orderNumber": 1,
+    "parentId": 1
+  },
+  {
+    "id": 9,
+    "titleRu": "​ПОДГОТОВКА В РФМШ",
+    "titleKz": "​РФММ-ГЕ ДАЙЫНДЫҚ",
+    "link": "/programs/3",
+    "orderNumber": 2,
+    "parentId": 1
+  },
+  {
+    "id": 10,
+    "titleRu": "​ПОДГОТОВКА К ЕНТ",
+    "titleKz": "​ҰБТ-ҒА ДАЙЫНДЫҚ",
+    "link": "/programs/4",
+    "orderNumber": 4,
+    "parentId": 1
+  },
+  {
+    "id": 11,
+    "titleRu": "​ПОДГОТОВКА В БИЛ (КТЛ)",
+    "titleKz": "​БИЛ-ГЕ ДАЙЫНДЫҚ",
+    "link": "/programs/6",
+    "orderNumber": 5,
+    "parentId": 1
+  },
+  {
+    "id": 12,
+    "titleRu": "​ПОДГОТОВКА В 165 ЛИЦЕЙ",
+    "titleKz": "​№165 ЛИЦЕЙГЕ ДАЙЫНДЫҚ",
+    "link": "/programs/5",
+    "orderNumber": 6,
+    "parentId": 1
+  },
+  {
+    "id": 13,
+    "titleRu": "​ПОСТУПИТЬ В 39 ЛИЦЕЙ",
+    "titleKz": "​39 ЛИЦЕЙГЕ ТҮСУ",
+    "link": "/programs/9",
+    "orderNumber": 7,
+    "parentId": 1
+  },
+  {
+    "id": 14,
+    "titleRu": "КАФЕДРА МАТЕМАТИКИ",
+    "titleKz": "МАТЕМАТИКА КАФЕДРАСЫ",
+    "link": "/teachers/28",
+    "orderNumber": 1,
+    "parentId": 2
+  },
+  {
+    "id": 15,
+    "titleRu": "КАФЕДРА РУССКОГО ЯЗЫКА",
+    "titleKz": "ОРЫС ТІЛІ КАФЕДРАСЫ",
+    "link": "/teachers/20",
+    "orderNumber": 2,
+    "parentId": 2
+  },
+  {
+    "id": 16,
+    "titleRu": "КАФЕДРА КАЗАХСКОГО ЯЗЫКА",
+    "titleKz": "ҚАЗАҚ ТІЛІ КАФЕДРАСЫ",
+    "link": "/teachers/26",
+    "orderNumber": 3,
+    "parentId": 2
+  },
+  {
+    "id": 17,
+    "titleRu": "КАФЕДРА АНГЛИЙСКОГО ЯЗЫКА",
+    "titleKz": "АҒЫЛШЫН ТІЛІ КАФЕДРАСЫ",
+    "link": "/teachers/51",
+    "orderNumber": 4,
+    "parentId": 2
+  },
+  {
+    "id": 18,
+    "titleRu": "КАФЕДРА ФИЗИКИ",
+    "titleKz": "ФИЗИКА КАФЕДРАСЫ",
+    "link": "/teachers",
+    "orderNumber": 5,
+    "parentId": 2
+  },
+  {
+    "id": 19,
+    "titleRu": "Задать вопрос",
+    "titleKz": "СҰРАҚ ҚОЮ",
+    "link": "/faq",
+    "orderNumber": 2,
+    "parentId": 4
+  },
+  {
+    "id": 20,
+    "titleRu": "FAQ",
+    "titleKz": "FAQ",
+    "link": "/faq",
+    "orderNumber": 1,
+    "parentId": 4
+  }
+]
