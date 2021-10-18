@@ -2,14 +2,15 @@ export const schema = gql`
   type ProgramSubject {
     id: Int!
     orderNumber: Int!
-    program: Program!
-    subject: Subject!
     programId: Int!
     subjectId: Int!
+    program: Program!
+    subject: Subject!
   }
 
   type Query {
-    programSubjects: [ProgramSubject!]! @skipAuth
+    programSubjects: [ProgramSubject!]! @requireAuth
+    programSubject(id: Int!): ProgramSubject @requireAuth
   }
 
   input CreateProgramSubjectInput {
@@ -22,5 +23,15 @@ export const schema = gql`
     orderNumber: Int
     programId: Int
     subjectId: Int
+  }
+
+  type Mutation {
+    createProgramSubject(input: CreateProgramSubjectInput!): ProgramSubject!
+      @requireAuth
+    updateProgramSubject(
+      id: Int!
+      input: UpdateProgramSubjectInput!
+    ): ProgramSubject! @requireAuth
+    deleteProgramSubject(id: Int!): ProgramSubject! @requireAuth
   }
 `

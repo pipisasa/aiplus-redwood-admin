@@ -6,19 +6,17 @@ export const standard = defineScenario<Prisma.ProgramWhyCreateArgs>({
       data: {
         textKz: 'String',
         textRu: 'String',
-        updatedAt: '2021-10-07T05:41:44Z',
+        updatedAt: '2021-10-18T07:25:49Z',
         program: {
           create: {
             titleRu: 'String',
             titleKz: 'String',
             logo: 'String',
-            videoTitleRu: 'String',
-            videoTitleKz: 'String',
             titleWhyRu: 'String',
             titleWhyKz: 'String',
-            updatedAt: '2021-10-07T05:41:44Z',
+            updatedAt: '2021-10-18T07:25:49Z',
             city: {
-              create: { name: 'String', updatedAt: '2021-10-07T05:41:44Z' },
+              create: { name: 'String', updatedAt: '2021-10-18T07:25:49Z' },
             },
           },
         },
@@ -28,19 +26,17 @@ export const standard = defineScenario<Prisma.ProgramWhyCreateArgs>({
       data: {
         textKz: 'String',
         textRu: 'String',
-        updatedAt: '2021-10-07T05:41:44Z',
+        updatedAt: '2021-10-18T07:25:49Z',
         program: {
           create: {
             titleRu: 'String',
             titleKz: 'String',
             logo: 'String',
-            videoTitleRu: 'String',
-            videoTitleKz: 'String',
             titleWhyRu: 'String',
             titleWhyKz: 'String',
-            updatedAt: '2021-10-07T05:41:44Z',
+            updatedAt: '2021-10-18T07:25:49Z',
             city: {
-              create: { name: 'String', updatedAt: '2021-10-07T05:41:44Z' },
+              create: { name: 'String', updatedAt: '2021-10-18T07:25:49Z' },
             },
           },
         },

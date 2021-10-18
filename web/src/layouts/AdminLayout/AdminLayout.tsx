@@ -17,16 +17,36 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   }, [isAuthenticated])
 
   return (
-    <div className="rw-scaffold">
+    <div
+      className="rw-scaffold"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '20rem 1fr',
+        maxWidth: '100%',
+        overflow: 'hidden',
+      }}
+    >
       <Toaster />
-      <header className="rw-header">
+      <header
+        className="rw-header"
+        style={{
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+        }}
+      >
         <h1 className="rw-heading rw-heading-primary">
           <Link to={routes.home()} className="rw-link">
             Главная
           </Link>
         </h1>
         <nav className="rw-nav">
-          <ul>
+          <ul
+            style={{
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              marginTop: '1rem',
+            }}
+          >
             <li>
               <Link to={routes.faqs()} className="rw-link">
                 FAQ
@@ -41,6 +61,23 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
               <Link to={routes.programs()} className="rw-link">
                 программы
               </Link>
+              <ul className="nav-submenu">
+                <li>
+                  <Link to={routes.programBenefits()} className="rw-link">
+                    ПРЕИМУЩЕСТВA
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.programWhies()} className="rw-link">
+                    ПРИЧИНЫ
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.programSubjects()} className="rw-link">
+                    ПРЕДМЕТЫ
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to={routes.cities()} className="rw-link">
@@ -73,6 +110,23 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
               </Link>
             </li>
             <li>
+              <Link to={routes.blogs()} className="rw-link">
+                Блог
+              </Link>
+              <ul className="nav-submenu">
+                <li>
+                  <Link to={routes.tagForBlogs()} className="rw-link">
+                    Teги
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.blogAndTagForBlogs()} className="rw-link">
+                    Тег + Блог
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
               <button
                 className="rw-button rw-button-green"
                 onClick={() => logOut()}
@@ -83,7 +137,15 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
           </ul>
         </nav>
       </header>
-      <main className="rw-main">{children}</main>
+      <main
+        className="rw-main"
+        style={{
+          maxWidth: '100%',
+          overflow: 'hidden',
+        }}
+      >
+        {children}
+      </main>
     </div>
   )
 }

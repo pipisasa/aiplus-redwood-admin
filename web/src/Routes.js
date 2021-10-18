@@ -8,6 +8,12 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Set, Router, Route } from '@redwoodjs/router'
+import BlogAndTagForBlogsLayout from 'src/layouts/BlogAndTagForBlogsLayout'
+import TagForBlogsLayout from 'src/layouts/TagForBlogsLayout'
+import BlogsLayout from 'src/layouts/BlogsLayout'
+import ProgramWhiesLayout from 'src/layouts/ProgramWhiesLayout'
+import ProgramBenefitsLayout from 'src/layouts/ProgramBenefitsLayout'
+import ProgramSubjectsLayout from 'src/layouts/ProgramSubjectsLayout'
 import MenuItemsLayout from 'src/layouts/MenuItemsLayout'
 import SubjectsLayout from 'src/layouts/SubjectsLayout'
 import TeachersLayout from 'src/layouts/TeachersLayout'
@@ -46,6 +52,24 @@ const Routes = () => {
           <Route path="/programs/{id:Int}" page={ProgramProgramPage} name="program" />
           <Route path="/programs" page={ProgramProgramsPage} name="programs" />
         </Set>
+        <Set wrap={ProgramWhiesLayout}>
+          <Route path="/program-whies/new" page={ProgramWhyNewProgramWhyPage} name="newProgramWhy" />
+          <Route path="/program-whies/{id:Int}/edit" page={ProgramWhyEditProgramWhyPage} name="editProgramWhy" />
+          <Route path="/program-whies/{id:Int}" page={ProgramWhyProgramWhyPage} name="programWhy" />
+          <Route path="/program-whies" page={ProgramWhyProgramWhiesPage} name="programWhies" />
+        </Set>
+        <Set wrap={ProgramBenefitsLayout}>
+          <Route path="/program-benefits/new" page={ProgramBenefitNewProgramBenefitPage} name="newProgramBenefit" />
+          <Route path="/program-benefits/{id:Int}/edit" page={ProgramBenefitEditProgramBenefitPage} name="editProgramBenefit" />
+          <Route path="/program-benefits/{id:Int}" page={ProgramBenefitProgramBenefitPage} name="programBenefit" />
+          <Route path="/program-benefits" page={ProgramBenefitProgramBenefitsPage} name="programBenefits" />
+        </Set>
+        <Set wrap={ProgramSubjectsLayout}>
+          <Route path="/program-subjects/new" page={ProgramSubjectNewProgramSubjectPage} name="newProgramSubject" />
+          <Route path="/program-subjects/{id:Int}/edit" page={ProgramSubjectEditProgramSubjectPage} name="editProgramSubject" />
+          <Route path="/program-subjects/{id:Int}" page={ProgramSubjectProgramSubjectPage} name="programSubject" />
+          <Route path="/program-subjects" page={ProgramSubjectProgramSubjectsPage} name="programSubjects" />
+        </Set>
 
         <Set wrap={CitiesLayout}>
           <Route path="/cities/new" page={CityNewCityPage} name="newCity" />
@@ -78,6 +102,25 @@ const Routes = () => {
           <Route path="/menu-items/{id:Int}/edit" page={MenuItemEditMenuItemPage} name="editMenuItem" />
           <Route path="/menu-items/{id:Int}" page={MenuItemMenuItemPage} name="menuItem" />
           <Route path="/menu-items" page={MenuItemMenuItemsPage} name="menuItems" />
+        </Set>
+        {/*//? Blogs */}
+        <Set wrap={BlogAndTagForBlogsLayout}>
+          <Route path="/blog-and-tag-for-blogs/new" page={BlogAndTagForBlogNewBlogAndTagForBlogPage} name="newBlogAndTagForBlog" />
+          <Route path="/blog-and-tag-for-blogs/{id:Int}/edit" page={BlogAndTagForBlogEditBlogAndTagForBlogPage} name="editBlogAndTagForBlog" />
+          <Route path="/blog-and-tag-for-blogs/{id:Int}" page={BlogAndTagForBlogBlogAndTagForBlogPage} name="blogAndTagForBlog" />
+          <Route path="/blog-and-tag-for-blogs" page={BlogAndTagForBlogBlogAndTagForBlogsPage} name="blogAndTagForBlogs" />
+        </Set>
+        <Set wrap={TagForBlogsLayout}>
+          <Route path="/tag-for-blogs/new" page={TagForBlogNewTagForBlogPage} name="newTagForBlog" />
+          <Route path="/tag-for-blogs/{id:Int}/edit" page={TagForBlogEditTagForBlogPage} name="editTagForBlog" />
+          <Route path="/tag-for-blogs/{id:Int}" page={TagForBlogTagForBlogPage} name="tagForBlog" />
+          <Route path="/tag-for-blogs" page={TagForBlogTagForBlogsPage} name="tagForBlogs" />
+        </Set>
+        <Set wrap={BlogsLayout}>
+          <Route path="/blogs/new" page={BlogNewBlogPage} name="newBlog" />
+          <Route path="/blogs/{id:Int}/edit" page={BlogEditBlogPage} name="editBlog" />
+          <Route path="/blogs/{id:Int}" page={BlogBlogPage} name="blog" />
+          <Route path="/blogs" page={BlogBlogsPage} name="blogs" />
         </Set>
       </Set>
       <Route notfound page={NotFoundPage} />

@@ -1,7 +1,6 @@
 export const schema = gql`
   type ProgramBenefit {
     id: Int!
-    program: Program!
     titleKz: String
     titleRu: String
     orderNumber: Int
@@ -9,10 +8,12 @@ export const schema = gql`
     createdAt: DateTime!
     updatedAt: DateTime!
     programId: Int!
+    program: Program!
   }
 
   type Query {
-    programBenefits: [ProgramBenefit!]! @skipAuth
+    programBenefits: [ProgramBenefit!]! @requireAuth
+    programBenefit(id: Int!): ProgramBenefit @requireAuth
   }
 
   input CreateProgramBenefitInput {
@@ -29,5 +30,15 @@ export const schema = gql`
     orderNumber: Int
     image: String
     programId: Int
+  }
+
+  type Mutation {
+    createProgramBenefit(input: CreateProgramBenefitInput!): ProgramBenefit!
+      @requireAuth
+    updateProgramBenefit(
+      id: Int!
+      input: UpdateProgramBenefitInput!
+    ): ProgramBenefit! @requireAuth
+    deleteProgramBenefit(id: Int!): ProgramBenefit! @requireAuth
   }
 `

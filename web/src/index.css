@@ -1,0 +1,13 @@
+.rw-nav > ul{
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+ul.nav-submenu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  text-transform: lowercase;
+}

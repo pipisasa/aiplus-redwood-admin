@@ -6,6 +6,7 @@ import {
   TextField,
   NumberField,
   Submit,
+  TextAreaField,
 } from '@redwoodjs/forms'
 import { ImageField, useImageField } from 'src/components/Image'
 // const formatDatetime = (value) => {
@@ -314,7 +315,7 @@ const ProgramForm = (props) => {
         >
           Fact about program kz
         </Label>
-        <TextField
+        <TextAreaField
           name="factAboutProgramKz"
           defaultValue={props.program?.factAboutProgramKz}
           className="rw-input"
@@ -330,7 +331,7 @@ const ProgramForm = (props) => {
         >
           Fact about program ru
         </Label>
-        <TextField
+        <TextAreaField
           name="factAboutProgramRu"
           defaultValue={props.program?.factAboutProgramRu}
           className="rw-input"

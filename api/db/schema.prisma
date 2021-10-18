@@ -11,7 +11,7 @@ datasource db {
 model User {
   id             Int       @id @default(autoincrement())
   createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+  updatedAt      DateTime  @updatedAt @default(now())
   name           String?
   salt           String?   @default("")
   email          String    @unique
@@ -25,7 +25,7 @@ model City {
   id        Int       @id @default(autoincrement())
   name      String    @db.VarChar(255)
   createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  updatedAt DateTime  @updatedAt @default(now())
   Program   Program[]
   schools   School[]
   Student   Student[]
@@ -39,7 +39,7 @@ model Faq {
   descriptionRu String
   descriptionKz String
   createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  updatedAt     DateTime @updatedAt @default(now())
 }
 
 model Fact {
@@ -49,7 +49,7 @@ model Fact {
   orderNumber Int      @default(0)
   image       String   @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
   createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  updatedAt   DateTime @updatedAt @default(now())
 }
 
 model School {
@@ -62,7 +62,7 @@ model School {
   descriptionRu String
   descriptionKz String
   createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  updatedAt     DateTime  @updatedAt @default(now())
   city          City      @relation(fields: [cityId], references: [id])
   programs      Program[]
 }
@@ -86,8 +86,8 @@ model Program {
   logoAtListOfPrograms String?
   orderNumber          Int              @default(0)
   youtubeVideoId       String?          @db.VarChar(255)
-  videoTitleRu         String?           @db.VarChar(255)
-  videoTitleKz         String?           @db.VarChar(255)
+  videoTitleRu         String?          @db.VarChar(255)
+  videoTitleKz         String?          @db.VarChar(255)
   factAboutProgramKz   String?
   factAboutProgramRu   String?
   titleWhyRu           String           @db.VarChar(255)
@@ -95,7 +95,7 @@ model Program {
   textWhyKz            String?
   textWhyRu            String?
   createdAt            DateTime         @default(now())
-  updatedAt            DateTime         @updatedAt
+  updatedAt            DateTime         @updatedAt @default(now())
   schoolId             Int?
   cityId               Int
   city                 City             @relation(fields: [cityId], references: [id])
@@ -126,7 +126,7 @@ model Student {
   sliderSubtitleRu String   @db.VarChar(255)
   year             DateTime
   createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  updatedAt        DateTime @updatedAt @default(now())
   programId        Int
   cityId           Int
   city             City     @relation(fields: [cityId], references: [id])
@@ -140,7 +140,7 @@ model Subject {
   descriptionRu  String?
   descriptionKz  String?
   createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @updatedAt
+  updatedAt      DateTime         @updatedAt @default(now())
   ProgramSubject ProgramSubject[]
   teachers       Teacher[]
 }
@@ -152,7 +152,7 @@ model ProgramBenefit {
   orderNumber Int?     @default(0)
   image       String?
   createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  updatedAt   DateTime @updatedAt @default(now())
   programId   Int
   program     Program  @relation(fields: [programId], references: [id])
 }
@@ -163,18 +163,20 @@ model ProgramWhy {
   textRu      String
   orderNumber Int?     @default(0)
   createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  updatedAt   DateTime @updatedAt @default(now())
   programId   Int
   program     Program  @relation(fields: [programId], references: [id])
 }
 
 model ProgramSubject {
-  id          Int     @id @default(autoincrement())
-  orderNumber Int     @default(0)
+  id          Int      @id @default(autoincrement())
+  orderNumber Int      @default(0)
   programId   Int
   subjectId   Int
-  program     Program @relation(fields: [programId], references: [id])
-  subject     Subject @relation(fields: [subjectId], references: [id])
+  program     Program  @relation(fields: [programId], references: [id])
+  subject     Subject  @relation(fields: [subjectId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt @default(now())
 
   @@unique([programId, subjectId], name: "ProgramSubject_programId_subjectId_key")
 }
@@ -199,7 +201,7 @@ model Teacher {
   subjectId      Int?
   subject        Subject? @relation(fields: [subjectId], references: [id])
   createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  updatedAt      DateTime @updatedAt @default(now())
 }
 
 model Feature {
@@ -211,20 +213,20 @@ model Feature {
   orderNum      Int?     @default(0)
   image         String?  @default("https://firebasestorage.googleapis.com/v0/b/chat-angular-e97bc.appspot.com/o/aiplus%2Fthumbs%2Fplaceholder-2_500x500.webp?alt=media")
   createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  updatedAt     DateTime @updatedAt @default(now())
 }
 
 model Project {
   id        Int      @id @default(autoincrement())
   name      String   @db.VarChar(255)
   createdAt DateTime @default(now())
-  updatedAt DateTime
+  updatedAt DateTime @updatedAt @default(now())
 }
 
 model Session {
   id                 Int       @id @default(autoincrement())
   createdAt          DateTime  @default(now())
-  updatedAt          DateTime
+  updatedAt          DateTime  @updatedAt @default(now())
   expiresAt          DateTime?
   handle             String    @unique
   hashedSessionToken String?
@@ -237,12 +239,12 @@ model Session {
 
 model Token {
   id          Int       @id @default(autoincrement())
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime
   hashedToken String
   type        TokenType
   expiresAt   DateTime
   sentTo      String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt @default(now())
   userId      Int
   User        User      @relation(fields: [userId], references: [id])
 
@@ -262,4 +264,40 @@ model MenuItem {
   parentId    Int?
   parent      MenuItem?  @relation("MenuItemToMenuItem", fields: [parentId], references: [id])
   children    MenuItem[] @relation("MenuItemToMenuItem")
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt @default(now())
+}
+
+model Blog {
+  id                Int                 @id @default(autoincrement())
+  titleRu           String
+  titleKz           String
+  textRu            String
+  textKz            String
+  image             String
+  descriptionKz     String
+  descriptionRu     String
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt @default(now())
+  BlogAndTagForBlog BlogAndTagForBlog[]
+}
+
+model TagForBlog {
+  id                Int                 @id @default(autoincrement())
+  orderNum          Int?                @default(0)
+  titleRu           String
+  titleKz           String
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt @default(now())
+  BlogAndTagForBlog BlogAndTagForBlog[]
+}
+
+model BlogAndTagForBlog {
+  id           Int         @id @default(autoincrement())
+  blog         Blog?       @relation(fields: [blogId], references: [id])
+  tag          TagForBlog? @relation(fields: [tagForBlogId], references: [id])
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt @default(now())
+  blogId       Int?
+  tagForBlogId Int?
 }

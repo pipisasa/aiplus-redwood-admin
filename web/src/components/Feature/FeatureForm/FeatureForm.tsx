@@ -15,7 +15,7 @@ import { ImageField, useImageField } from 'src/components/Image'
 // }
 
 const FeatureForm = (props) => {
-  const [dataWithImage, imageFliedProps] = useImageField({
+  const [dataWithImage, imageFieldProps] = useImageField({
     defaultImage: props?.feature?.image,
     name: 'image',
   })
@@ -96,7 +96,7 @@ const FeatureForm = (props) => {
         />
         <FieldError name="descriptionRu" className="rw-field-error" />
 
-        <ImageField {...imageFliedProps} />
+        <ImageField {...imageFieldProps} />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
