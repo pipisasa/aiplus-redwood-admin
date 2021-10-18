@@ -16,15 +16,14 @@ import { ImageField, useImageField } from 'src/components/Image'
 // }
 
 const TeacherForm = (props) => {
-  const { dataWithImage, imageFliedProps } = useImageField({
+  const [dataWithImage, imageFliedProps] = useImageField({
     defaultImage: props?.teacher?.image,
     name: 'image',
   })
-  const { dataWithImage: dataWithImage2, imageFliedProps: imageFliedProps2 } =
-    useImageField({
-      defaultImage: props?.teacher?.image2,
-      name: 'image2',
-    })
+  const [dataWithImage2, imageFliedProps2] = useImageField({
+    defaultImage: props?.teacher?.image2,
+    name: 'image2',
+  })
   const onSubmit = (data) => {
     props.onSave(dataWithImage2(dataWithImage(data)), props?.teacher?.id)
   }

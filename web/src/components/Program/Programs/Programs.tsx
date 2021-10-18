@@ -3,6 +3,7 @@ import { toast } from '@redwoodjs/web/toast'
 import { Link, routes } from '@redwoodjs/router'
 
 import { QUERY } from 'src/components/Program/ProgramsCell'
+import { imageTag } from 'src/components/Image'
 
 const DELETE_PROGRAM_MUTATION = gql`
   mutation DeleteProgramMutation($id: Int!) {
@@ -38,16 +39,6 @@ const timeTag = (datetime) => {
 //   return <input type="checkbox" checked={checked} disabled />
 // }
 
-const imageTag = (url) => (
-  <img
-    width={100}
-    height={100}
-    style={{ objectFit: 'contain' }}
-    src={url}
-    alt={url}
-  />
-)
-
 const ProgramsList = ({ programs }) => {
   const [deleteProgram] = useMutation(DELETE_PROGRAM_MUTATION, {
     onCompleted: () => {
@@ -77,6 +68,9 @@ const ProgramsList = ({ programs }) => {
             <th>Id</th>
             <th>Title ru</th>
             <th>Title kz</th>
+            <th>Logo</th>
+            <th>Logo at root</th>
+            <th>Logo at list of programs</th>
             <th>Short school name ru</th>
             <th>Short school name kz</th>
             <th>Full school name ru</th>
@@ -87,9 +81,6 @@ const ProgramsList = ({ programs }) => {
             <th>Title at root kz</th>
             <th>Title at root hover ru</th>
             <th>Title at root hover kz</th>
-            <th>Logo</th>
-            <th>Logo at root</th>
-            <th>Logo at list of programs</th>
             <th>Order number</th>
             <th>Youtube video id</th>
             <th>Video title ru</th>
@@ -113,6 +104,9 @@ const ProgramsList = ({ programs }) => {
               <td>{truncate(program.id)}</td>
               <td>{truncate(program.titleRu)}</td>
               <td>{truncate(program.titleKz)}</td>
+              <td>{imageTag(program.logo)}</td>
+              <td>{imageTag(program.logoAtRoot)}</td>
+              <td>{imageTag(program.logoAtListOfPrograms)}</td>
               <td>{truncate(program.shortSchoolNameRu)}</td>
               <td>{truncate(program.shortSchoolNameKz)}</td>
               <td>{truncate(program.fullSchoolNameRu)}</td>
@@ -123,9 +117,6 @@ const ProgramsList = ({ programs }) => {
               <td>{truncate(program.titleAtRootKz)}</td>
               <td>{truncate(program.titleAtRootHoverRu)}</td>
               <td>{truncate(program.titleAtRootHoverKz)}</td>
-              <td>{imageTag(program.logo)}</td>
-              <td>{imageTag(program.logoAtRoot)}</td>
-              <td>{imageTag(program.logoAtListOfPrograms)}</td>
               <td>{truncate(program.orderNumber)}</td>
               <td>{truncate(program.youtubeVideoId)}</td>
               <td>{truncate(program.videoTitleRu)}</td>

@@ -8,6 +8,7 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Set, Router, Route } from '@redwoodjs/router'
+import MenuItemsLayout from 'src/layouts/MenuItemsLayout'
 import SubjectsLayout from 'src/layouts/SubjectsLayout'
 import TeachersLayout from 'src/layouts/TeachersLayout'
 import StudentsLayout from 'src/layouts/StudentsLayout'
@@ -71,6 +72,12 @@ const Routes = () => {
           <Route path="/subjects/{id:Int}/edit" page={SubjectEditSubjectPage} name="editSubject" />
           <Route path="/subjects/{id:Int}" page={SubjectSubjectPage} name="subject" />
           <Route path="/subjects" page={SubjectSubjectsPage} name="subjects" />
+        </Set>
+        <Set wrap={MenuItemsLayout}>
+          <Route path="/menu-items/new" page={MenuItemNewMenuItemPage} name="newMenuItem" />
+          <Route path="/menu-items/{id:Int}/edit" page={MenuItemEditMenuItemPage} name="editMenuItem" />
+          <Route path="/menu-items/{id:Int}" page={MenuItemMenuItemPage} name="menuItem" />
+          <Route path="/menu-items" page={MenuItemMenuItemsPage} name="menuItems" />
         </Set>
       </Set>
       <Route notfound page={NotFoundPage} />

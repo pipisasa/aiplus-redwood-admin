@@ -7,7 +7,6 @@ import {
   NumberField,
   Submit,
 } from '@redwoodjs/forms'
-import { ImageField, useImageField } from 'src/components/Image'
 
 // const formatDatetime = (value) => {
 //   if (value) {
@@ -15,13 +14,9 @@ import { ImageField, useImageField } from 'src/components/Image'
 //   }
 // }
 
-const FactForm = (props) => {
-  const [dataWithImage, imageFliedProps] = useImageField({
-    defaultImage: props?.fact?.image,
-    name: 'image',
-  })
+const MenuItemForm = (props) => {
   const onSubmit = (data) => {
-    props.onSave(dataWithImage(data), props?.fact?.id)
+    props.onSave(data, props?.menuItem?.id)
   }
 
   return (
@@ -43,7 +38,7 @@ const FactForm = (props) => {
         </Label>
         <TextField
           name="titleRu"
-          defaultValue={props.fact?.titleRu}
+          defaultValue={props.menuItem?.titleRu}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
@@ -59,12 +54,28 @@ const FactForm = (props) => {
         </Label>
         <TextField
           name="titleKz"
-          defaultValue={props.fact?.titleKz}
+          defaultValue={props.menuItem?.titleKz}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
         <FieldError name="titleKz" className="rw-field-error" />
+
+        <Label
+          name="link"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Link
+        </Label>
+        <TextField
+          name="link"
+          defaultValue={props.menuItem?.link}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+        <FieldError name="link" className="rw-field-error" />
 
         <Label
           name="orderNumber"
@@ -75,14 +86,27 @@ const FactForm = (props) => {
         </Label>
         <NumberField
           name="orderNumber"
-          defaultValue={props.fact?.orderNumber}
+          defaultValue={props.menuItem?.orderNumber}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
         <FieldError name="orderNumber" className="rw-field-error" />
 
-        <ImageField {...imageFliedProps} />
+        <Label
+          name="parentId"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Parent id
+        </Label>
+        <NumberField
+          name="parentId"
+          defaultValue={props.menuItem?.parentId}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+        <FieldError name="parentId" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
@@ -94,4 +118,4 @@ const FactForm = (props) => {
   )
 }
 
-export default FactForm
+export default MenuItemForm

@@ -7,7 +7,7 @@ import {
   NumberField,
   Submit,
 } from '@redwoodjs/forms'
-import ImageInput from 'src/components/Form/ImageInput'
+import { ImageField, useImageField } from 'src/components/Image'
 // const formatDatetime = (value) => {
 //   if (value) {
 //     return value.replace(/:\d{2}\.\d{3}\w/, '')
@@ -15,17 +15,22 @@ import ImageInput from 'src/components/Form/ImageInput'
 // }
 
 const ProgramForm = (props) => {
-  const [logo, setLogo] = React.useState('')
-  const [logoAtRoot, setLogoAtRoot] = React.useState('')
-  const [logoAtListOfPrograms, setLogoAtListOfPrograms] = React.useState('')
+  const [dataWithLogo, logoFieldProps] = useImageField({
+    defaultImage: props?.program?.logo,
+    name: 'logo',
+  })
+  const [dataWithLogoAtRoot, logoAtRootFieldProps] = useImageField({
+    defaultImage: props?.program?.logoAtRoot,
+    name: 'logoAtRoot',
+  })
+  const [dataWithLogoAtListOfPrograms, logoAtListOfProgramsFieldProps] =
+    useImageField({
+      defaultImage: props?.program?.logoAtListOfPrograms,
+      name: 'logoAtListOfPrograms',
+    })
   const onSubmit = (data) => {
     props.onSave(
-      {
-        ...data,
-        logo,
-        logoAtRoot,
-        logoAtListOfPrograms,
-      },
+      dataWithLogoAtListOfPrograms(dataWithLogoAtRoot(dataWithLogo(data))),
       props?.program?.id
     )
   }
@@ -232,39 +237,11 @@ const ProgramForm = (props) => {
         />
         <FieldError name="titleAtRootHoverKz" className="rw-field-error" />
 
-        <Label
-          name="logo"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Logo
-        </Label>
-        <ImageInput onUploaded={(imgs) => setLogo(imgs?.[0]?.url || '')} />
-        <FieldError name="logo" className="rw-field-error" />
+        <ImageField {...logoFieldProps} />
 
-        <Label
-          name="logoAtRoot"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Logo at root
-        </Label>
-        <ImageInput
-          onUploaded={(imgs) => setLogoAtRoot(imgs?.[0]?.url || '')}
-        />
-        <FieldError name="logoAtRoot" className="rw-field-error" />
+        <ImageField {...logoAtRootFieldProps} />
 
-        <Label
-          name="logoAtListOfPrograms"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Logo at list of programs
-        </Label>
-        <ImageInput
-          onUploaded={(imgs) => setLogoAtListOfPrograms(imgs?.[0]?.url || '')}
-        />
-        <FieldError name="logoAtListOfPrograms" className="rw-field-error" />
+        <ImageField {...logoAtListOfProgramsFieldProps} />
 
         <Label
           name="orderNumber"
@@ -438,7 +415,7 @@ const ProgramForm = (props) => {
           defaultValue={props.program?.schoolId}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
+          validation={{}}
         />
         <FieldError name="schoolId" className="rw-field-error" />
 

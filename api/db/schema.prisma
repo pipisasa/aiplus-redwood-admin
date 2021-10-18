@@ -86,8 +86,8 @@ model Program {
   logoAtListOfPrograms String?
   orderNumber          Int              @default(0)
   youtubeVideoId       String?          @db.VarChar(255)
-  videoTitleRu         String           @db.VarChar(255)
-  videoTitleKz         String           @db.VarChar(255)
+  videoTitleRu         String?           @db.VarChar(255)
+  videoTitleKz         String?           @db.VarChar(255)
   factAboutProgramKz   String?
   factAboutProgramRu   String?
   titleWhyRu           String           @db.VarChar(255)
@@ -197,7 +197,7 @@ model Teacher {
   cityId         Int
   city           City     @relation(fields: [cityId], references: [id])
   subjectId      Int?
-  subject        Subject?  @relation(fields: [subjectId], references: [id])
+  subject        Subject? @relation(fields: [subjectId], references: [id])
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 }
@@ -251,4 +251,15 @@ model Token {
 
 enum TokenType {
   RESET_PASSWORD
+}
+
+model MenuItem {
+  id          Int        @id @default(autoincrement())
+  titleRu     String
+  titleKz     String
+  link        String
+  orderNumber Int
+  parentId    Int?
+  parent      MenuItem?  @relation("MenuItemToMenuItem", fields: [parentId], references: [id])
+  children    MenuItem[] @relation("MenuItemToMenuItem")
 }

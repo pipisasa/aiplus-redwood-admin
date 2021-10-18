@@ -44,7 +44,7 @@ export const ImageField = ({
         className="rw-label"
         errorClassName="rw-label rw-label-error"
       >
-        Image
+        {name}
       </Label>
       <PickerInline
         apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
@@ -81,12 +81,16 @@ export const useImageField = ({
 }: UseImageFieldOptions) => {
   const [url, setUrl] = React.useState<string>(defaultImage || '')
 
-  const dataWithImage = (data = {}) => ({
+  const dataWithImage = (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    data: Record<string, any> = {}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ): Record<string, any> => ({
     ...data,
     [name]: url,
   })
 
-  const imageFliedProps: ImageFieldProps = {
+  const imageFieldProps: ImageFieldProps = {
     image: url,
     onChange: (...args) => {
       console.log(args)
@@ -95,8 +99,9 @@ export const useImageField = ({
     name,
   }
 
-  return {
-    dataWithImage,
-    imageFliedProps,
-  }
+  return [dataWithImage, imageFieldProps] as [
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (data: Record<string, any>) => Record<string, any>,
+    ImageFieldProps
+  ]
 }

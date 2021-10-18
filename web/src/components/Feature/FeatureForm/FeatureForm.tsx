@@ -15,7 +15,7 @@ import { ImageField, useImageField } from 'src/components/Image'
 // }
 
 const FeatureForm = (props) => {
-  const { dataWithImage, imageFliedProps } = useImageField({
+  const [dataWithImage, imageFliedProps] = useImageField({
     defaultImage: props?.feature?.image,
     name: 'image',
   })

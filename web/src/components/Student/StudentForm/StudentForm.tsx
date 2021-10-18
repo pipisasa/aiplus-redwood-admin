@@ -17,7 +17,7 @@ const formatDatetime = (value) => {
 }
 
 const StudentForm = (props) => {
-  const { dataWithImage, imageFliedProps } = useImageField({
+  const [dataWithImage, imageFliedProps] = useImageField({
     defaultImage: props?.student?.image,
     name: 'image',
   })
